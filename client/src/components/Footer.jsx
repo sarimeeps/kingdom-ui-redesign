@@ -9,7 +9,7 @@ import { HiOutlineMail } from "react-icons/hi";
 function Footer() {
     return (
         <footer className="w-full mt-auto flex items-center bg-[var(--button)] text-[var(--bg)] py-12 text-center md:text-left">
-            <div className="container mx-auto  grid grid-cols-1 md:grid-cols-4 gap-8 max-w-fit-content">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 max-w-fit-content">
                 <div className="md:mr-4">
                     <a className="" href="/">
                         <img src={whiteLogo} alt="Kingdom's Logo" />
