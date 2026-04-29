@@ -28,6 +28,8 @@
   @media (max-width: 1024px) {
     font-size: 1rem;
   } 
+  --swiper-navigation-color: #fff;
+  --swiper-navigation-size: 2px;
 }
   /* font: 1.375rem var(--sans);
   letter-spacing: 0.66px;

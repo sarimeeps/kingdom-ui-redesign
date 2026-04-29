@@ -1,5 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
+
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,20 +19,21 @@ const Carousel = () => {
         <div className="max-w-[1920px]">
 
             <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
+                modules={[Pagination, Autoplay]}
                 spaceBetween={50}
                 slidesPerView={1}
-                navigation={true}
                 loop={true}
-                pagination={{ clickable: true }}
+                pagination={{ 
+                    clickable: true,
+                    bulletClass: 'swiper-pagination-bullet !w-2.5 !h-2.5 transition-all duration-300' ,
+                    bulletActiveClass: 'swiper-pagination-bullet-active !bg-gray-500 !w-6 !rounded-full',
+                }}
                 autoplay={{
                     delay: 4000,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: false,
                 }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-                className='h-130 md:h-140 lg:h-120 w-full'
+                className='h-140 md:h-150 lg:h-160 w-full my-4'
             >
                 {[
                     carousel1,

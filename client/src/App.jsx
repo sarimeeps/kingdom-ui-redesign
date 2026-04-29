@@ -9,8 +9,9 @@ function App() {
   return (
     <>
       <section id="relative center">
-        <div id="large-gradient" className="absolute -z-10 h-167 lg:h-162 md:h-180 w-full bg-linear-to-r from-[#E193CD]/50 to-[#E1A1CC]/50 to-[#E0A2C0]/50 to-[#E3AFCA]/50 to-[#F1BFCC]/50"></div>
+        <div id="large-gradient" className="absolute -z-10 h-175 lg:h-205 md:h-190 w-full bg-linear-to-r from-[#E193CD]/50 to-[#E1A1CC]/50 to-[#E0A2C0]/50 to-[#E3AFCA]/50 to-[#F1BFCC]/50"></div>
         <Navbar />
+        <Homepage />
         <h1>ORANGE HAIR YOONGI</h1>
         <h2>ORANGE HAIR YOONGI</h2>
         <h3>ORANGE HAIR YOONGI</h3>
@@ -22,7 +23,6 @@ function App() {
         </ul>
         </div>
         <Footer />
-        <Homepage />
       </section>
 
     </>
