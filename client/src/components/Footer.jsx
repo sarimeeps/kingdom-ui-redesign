@@ -9,13 +9,13 @@ import { HiOutlineMail } from "react-icons/hi";
 function Footer() {
     return (
         <footer className="w-full mt-auto flex items-center bg-[var(--button)] text-[var(--bg)] py-12 text-center md:text-left">
-            <div className="container mx-auto max-w-fit-content grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="container mx-auto  grid grid-cols-1 md:grid-cols-4 gap-8 max-w-fit-content">
                 <div className="md:mr-4">
                     <a className="" href="/">
                         <img src={whiteLogo} alt="Kingdom's Logo" />
                     </a>
                 </div>
-                <div id="footer-id">
+                <div id="footer-id" className="border-[#fff]">
                     <h3 >
                         Location:
                     </h3>
@@ -28,20 +28,12 @@ function Footer() {
                         <h3>
                             Contact:
                         </h3>
-                        <ul className='flex-inline'>
-                            <li><LuPhone /> </li>
-                            <li>336-727-3039</li>
-                        </ul>
-                        <ul className='flex-inline'>
-                            <li><HiOutlineMail /> </li>
-                            <li>kingdomofkpopandmore@gmail.com</li>
-                        </ul>
+                        <li><LuPhone />336-727-3039</li>
+                        <li><HiOutlineMail />kingdomofkpopandmore@gmail.com</li>
                         <li>
-                            <ul className='flex-inline mr-4'>
-                                <li><IoLogoInstagram size={23} /> </li>
-                                <li><FaFacebook /> </li>
-                                <li><FaTiktok /> </li>
-                            </ul>
+                            <IoLogoInstagram size={23} />
+                            <FaFacebook />
+                            <FaTiktok />
                         </li>
                     </ul>
                 </div>
