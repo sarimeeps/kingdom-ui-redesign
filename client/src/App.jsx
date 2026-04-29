@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar' 
 import Footer from './components/Footer'
+import InstaPlugIn from './components/InstaPlugIn'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <li>YOONGI</li>
         </ul>
         </div>
+        {/* <InstaPlugIn /> */}
         <Footer />
       </section>
 
