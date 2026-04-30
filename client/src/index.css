@@ -71,10 +71,10 @@ h1 {
   font-style: normal;
   color: var(--text-h);
   font-size: 2.375rem;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
   @media (max-width: 1024px) {
     font-size: 1.875rem;
-    margin: 1.25rem 0;
+    /* margin: 1.25rem 0; */
   }
 }
 
@@ -82,7 +82,7 @@ h2 {
   font-family: var(--sans);
   font-size: 1.875rem;
   font-weight: 600;
-  color: var(--text);
+  /* color: var(--text); */
   margin: 0 0 0.5rem;
   @media (max-width: 1024px) {
     font-size: 1.375rem;
@@ -146,4 +146,9 @@ button{
    @media (max-width: 1024px) {
     font-size: 0.8rem;
   }
+}
+
+#card-title{
+  font-size: 2.5rem;
+  font-weight: 500;
 }
