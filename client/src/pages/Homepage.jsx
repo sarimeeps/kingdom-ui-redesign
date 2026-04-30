@@ -1,11 +1,11 @@
-import React from 'react'
+import Carousel from '../components/Carousel';
 
-function Homepage() {
-  return (
-    <div>
-        
-    </div>
-  )
+const Homepage = () => {
+
+    return(
+        <>
+            <Carousel />
+        </>
+    )
 }
-
-export default Homepage
+export default Homepage;

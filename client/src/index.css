@@ -58,7 +58,7 @@ body {
   width: 100vw;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center; */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -131,9 +131,9 @@ p {
   /* border: red solid 1px; */
 }
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
 button{
   font-family: var(--btn-font);
