@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar' 
 import Homepage from './pages/Homepage'
 import Footer from './components/Footer'
+// import InstaPlugIn from './components/InstaPlugIn'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <li>YOONGI</li>
         </ul>
         </div>
+        {/* <InstaPlugIn /> */}
         <Footer />
       </section>
 
