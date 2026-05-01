@@ -4,7 +4,7 @@ A UI/UX redesign project for a small K-pop business, focusing on improving usabi
 ### Design & Planning
 This project includes ongoing design and research work on Figma 
 
-- [Kingdom Figma](https://www.figma.com/design/NFg21Qq627sHcmAkeBjPJY/Kingdom-Redesign?node-id=386-2474&t=SVV6J0U3sMAnmRx8-1): UI mockups and layout ideas (WIP)
+- [Kingdom Figma](https://www.figma.com/design/NFg21Qq627sHcmAkeBjPJY/Kingdom-Redesign?node-id=386-2474&t=SVV6J0U3sMAnmRx8-1): UI mockups and layout ideas
 - [Kingdom FigJam](https://www.figma.com/board/Oq56HPc2fhkfUnWshO7YoJ/Kingdom-Redesign?node-id=0-1&t=KxO8X3po8vMe7qtK-1): Original Website design notes, sitemap, and userflows
 
 ### Team
