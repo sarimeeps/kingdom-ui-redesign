@@ -29,6 +29,13 @@
     font-size: 1rem;
   } 
 }
+
+#slogan {
+  font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
   /* font: 1.375rem var(--sans);
   letter-spacing: 0.66px;
 
@@ -151,4 +158,5 @@ button{
 #card-title{
   font-size: 2.5rem;
   font-weight: 500;
+  margin: 0;
 }

@@ -17,7 +17,7 @@ const Homepage = () => {
     return (
         <div className='flex flex-col items-center justify-center mb-8'>
             <Carousel />
-            <h1 className='border mt-13.5 mb-6'>"Feeding you through your eyes, ears, and mouth!"</h1>
+            <h1 id='slogan' className='mt-16 mb-12'>"Feeding you through your eyes, ears, and mouth!"</h1>
             <ul className="flex flex-1 gap-15">
                 {homeCards.map(card => (
                     <li
