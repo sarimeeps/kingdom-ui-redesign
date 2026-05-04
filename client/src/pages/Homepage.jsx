@@ -17,12 +17,12 @@ const Homepage = () => {
     return (
         <div className='flex flex-col items-center justify-center mb-8'>
             <Carousel />
-            <h1 id='slogan' className='mt-16 mb-12'>"Feeding you through your eyes, ears, and mouth!"</h1>
-            <ul className="flex flex-1 gap-15">
+            <h1 id='slogan' className='text-center mt-16 mb-12'>"Feeding you through your eyes, ears, and mouth!"</h1>
+            <ul className="w-full justify-center items-center flex flex-col md:flex-row gap-6 lg:gap-15">
                 {homeCards.map(card => (
                     <li
                     key={card.id}
-                    className=''
+                    className='w-full max-w-[350px] lg:max-w-[420px]'
                     >
                         <RouteCard image={card.image} title={card.title} link={card.link} />
                     </li>
