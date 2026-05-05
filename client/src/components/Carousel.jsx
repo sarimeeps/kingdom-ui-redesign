@@ -13,7 +13,7 @@ import carousel3 from '../assets/carousel3.png'
 const Carousel = () => {
 
     return (
-        <div className="max-w-[1905px]">
+        <div className="w-full max-w-[1905px]">
 
             <Swiper
                 modules={[Pagination, Autoplay]}

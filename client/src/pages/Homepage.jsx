@@ -11,11 +11,11 @@ const Homepage = () => {
     const homeCards = [
         {id: 1, image: books, title:'Book Shop', link:'/'},
         {id: 2, image: kpop, title:'K-Pop', link:'/'},
-        {id: 3, image: bake, title:'Books', link:'/'}
+        {id: 3, image: bake, title:'Bake Shop', link:'/'}
     ]
 
     return (
-        <div className='flex flex-col items-center justify-center mb-8'>
+        <div className='w-full flex flex-col items-center justify-center mb-8'>
             <Carousel />
             <h1 id='slogan' className='text-center mt-16 mb-12'>"Feeding you through your eyes, ears, and mouth!"</h1>
             <ul className="w-full justify-center items-center flex flex-col md:flex-row gap-6 lg:gap-15">
