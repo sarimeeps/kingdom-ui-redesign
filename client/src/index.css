@@ -78,6 +78,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Abril Fatface 38px Regular*/
 h1 {
   font-family: var(--heading);
   font-weight: 400;
@@ -91,6 +92,8 @@ h1 {
   }
 }
 
+/* Gabarito 30px Medium */
+
 h2 {
   font-family: var(--sans);
   font-size: 1.875rem;
@@ -102,6 +105,7 @@ h2 {
   }
 }
 
+/* Gabarito 22px Medium */
 h3 {
   font-family: var(--sans);
   font-size: 1.375rem;
@@ -116,6 +120,7 @@ h3 {
 p {
   margin: 0;
 }
+
 
 #nav-id li{
   font-family: var(--sans);
@@ -153,9 +158,9 @@ button{
   font-size: 1rem;
   font-weight: 700;
   background-color: var(--button);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   color: #ffffff;
-  border-radius: 1.25rem;
+  border-radius: 1rem;
    @media (max-width: 1024px) {
     font-size: 0.8rem;
   }
