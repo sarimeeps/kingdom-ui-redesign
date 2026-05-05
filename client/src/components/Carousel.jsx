@@ -1,9 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -16,7 +13,7 @@ import carousel3 from '../assets/carousel3.png'
 const Carousel = () => {
 
     return (
-        <div className="max-w-[1920px]">
+        <div className="max-w-[1905px]">
 
             <Swiper
                 modules={[Pagination, Autoplay]}
