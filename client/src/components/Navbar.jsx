@@ -25,7 +25,7 @@ function Navbar(){
         <header className='relative mx-auto w-full px-2 py-4'>
             <nav className="max-w-[1920px] mx-auto flex items-center justify-between bg-white border border-[#fff] rounded-xl py-6 px-4 md:px-6 lg:px-8">
                 {/* mobile nav icon */}
-                <div className="lg:hidden cursor-pointer" onClick={ handleMenu }>
+                <div className="lg:hidden cols-1 cursor-pointer" onClick={ handleMenu }>
                     <Menu size={27}/>
                 </div>
                 
