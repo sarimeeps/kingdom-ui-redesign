@@ -1,5 +1,6 @@
 import Carousel from '../components/Carousel';
 import RouteCard from '../components/RouteCard';
+import InstaPlugin from '../components/InstaPlugIn';
 
 import bake from '../assets/baked-item.jpg';
 import kpop from '../assets/kpop-items.png';
@@ -28,6 +29,9 @@ const Homepage = () => {
                     </li>
                 ))}
             </ul>
+            <section>
+                <InstaPlugin />
+            </section>
         </div>
     )
 }
