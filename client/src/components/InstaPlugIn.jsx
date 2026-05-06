@@ -1,9 +1,9 @@
-import post1 from '../assets/ig-img-1.jpg';
-import post2 from '../assets/ig-img-2.jpg';
-import post3 from '../assets/ig-img-3.jpg';
-import post4 from '../assets/ig-img-4.jpg';
-import post5 from '../assets/ig-img-5.jpg';
-import post6 from '../assets/ig-img-6.jpg';
+import post1 from '../assets/phone_imgs/ig-img-1.jpg';
+import post2 from '../assets/phone_imgs/ig-img-2.jpg';
+import post3 from '../assets/phone_imgs/ig-img-3.jpg';
+import post4 from '../assets/phone_imgs/ig-img-4.jpg';
+import post5 from '../assets/phone_imgs/ig-img-5.jpg';
+import post6 from '../assets/phone_imgs/ig-img-6.jpg';
 
 import mascot from '../assets/mascot.jpg';
 
