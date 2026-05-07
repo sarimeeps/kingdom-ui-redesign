@@ -1,5 +1,6 @@
 import Carousel from '../components/Carousel';
 import RouteCard from '../components/RouteCard';
+import InstaPlugin from '../components/InstaPlugIn';
 import front from '../assets/kingdom_front.png'
 import bake from '../assets/baked-item.jpg';
 import kpop from '../assets/kpop-items.png';
@@ -59,6 +60,9 @@ const Homepage = () => {
                     <button>Facebook</button>
                     <button>TikTok</button>
                 </div>
+            </section>
+            <section>
+                <InstaPlugin />
             </section>
         </div>
     )
