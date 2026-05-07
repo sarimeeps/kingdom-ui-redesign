@@ -4,7 +4,6 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage'
 import Footer from './components/Footer'
-// import InstaPlugIn from './components/InstaPlugIn'
 
 function App() {
 

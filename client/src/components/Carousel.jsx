@@ -5,9 +5,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import carousel1 from '../assets/carousel1.png'
-import carousel2 from '../assets/carousel2.png'
-import carousel3 from '../assets/carousel3.png'
+import carousel1 from '../assets/home_carousel/carousel1.png'
+import carousel2 from '../assets/home_carousel/carousel2.png'
+import carousel3 from '../assets/home_carousel/carousel3.png'
 
 
 const Carousel = () => {

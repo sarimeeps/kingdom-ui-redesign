@@ -1,5 +1,4 @@
 import whiteLogo from '../assets/kingdom-logo-white.png';
-// import { IoLogoInstagram } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
