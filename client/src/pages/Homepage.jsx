@@ -1,9 +1,10 @@
 import Carousel from '../components/Carousel';
 import RouteCard from '../components/RouteCard';
+import InstaPlugin from '../components/InstaPlugIn';
 import front from '../assets/kingdom_front.png'
-import bake from '../assets/baked-item.jpg';
-import kpop from '../assets/kpop-items.png';
-import books from '../assets/books.png';
+import bake from '../assets/route_cards/baked-item.jpg';
+import kpop from '../assets/route_cards/kpop-items.png';
+import books from '../assets/route_cards/books.png';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { IoLogoFacebook } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io5";
@@ -89,6 +90,9 @@ const Homepage = () => {
                         </li>
                     </ul>
                 </div>
+            </section>
+            <section>
+                <InstaPlugin />
             </section>
         </div>
     )
