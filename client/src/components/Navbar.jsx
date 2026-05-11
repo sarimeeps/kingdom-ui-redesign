@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'
 import SearchBar from './SearchBar';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
-import {Link, NavLink} from 'react-router'
+import { Link, NavLink } from 'react-router'
 
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
@@ -26,6 +26,7 @@ function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
     const [dropOpen, setDropOpen] = useState(false);
+    const [mobileDropOpen, setMobileDropOpen] = useState(false);
 
     const handleMenu = () => {
         setIsOpen(!isOpen);
@@ -35,10 +36,10 @@ function Navbar() {
         <div className='relative mx-auto w-full px-2 py-4'>
             <nav className="max-w-[1920px] mx-auto flex items-center justify-between bg-white border border-[#fff] rounded-xl py-6 px-4 md:px-6 lg:px-8">
                 {/* mobile nav icon */}
-                <div className="lg:hidden cols-1 cursor-pointer" onClick={ handleMenu }>
+                <div className="lg:hidden cols-1 cursor-pointer" onClick={handleMenu}>
                     <Menu size={27} />
                 </div>
-
+                {/* nav logo  */}
                 <div id="logo" className='absolute left-1/2 -translate-x-1/2 flex-shrink-0 h-13  lg:static lg:translate-x-0'>
                     <Link to="/">
                         <img src={logo} alt="kingdom-logo" className='h-full object-contain' />
@@ -50,31 +51,31 @@ function Navbar() {
 
                     <li className='p-1 cursor-pointer'> <NavLink to="/" className={({ isActive }) => isActive ? 'underline' : ''}>Home</NavLink></li>
 
-                    <div className='flex flex-col relative' onMouseEnter={() => setDropOpen(true) } onMouseLeave={() => setDropOpen(false)}>
+                    <div className='flex flex-col relative' onMouseEnter={() => setDropOpen(true)} onMouseLeave={() => setDropOpen(false)}>
                         <div className="group flex flex-row items-center cursor-pointer">
                             <li className='p-1 cursor-pointer'>Shop</li>
-                            <IoIosArrowDown className={`${ dropOpen ? 'rotate-180' : 'rotate-0'} transition duration-300`}/>
+                            <IoIosArrowDown className={`${dropOpen ? 'rotate-180' : 'rotate-0'} transition duration-300`} />
                         </div>
                         <div className=''>
                             {/* shop dropdown menu */}
-                        {
-                            dropOpen && (
-                                <ul className={`absolute top-9 border border-[#E193CD] rounded-lg bg-[#fff] transition-transform duration-300 ease-in-out `}>
-                                    {shopItems.map(item => (
-                                        <li key={item.id} className='cursor-pointer hover:bg-[var(--text-h)] hover:text-[#fff] rounded-sm'>
-                                            <Link 
-                                                to={item.route}    
-                                                onClick={() => setDropOpen(false)}
-                                            >
-                                                <div className='p-4 transition-transform duration-200 hover:translate-x-1 ' >
-                                                    <p>{item.text}</p>
-                                                </div>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )
-                        }
+                            {
+                                dropOpen && (
+                                    <ul className={`absolute top-9 border border-[#E193CD] rounded-lg bg-[#fff] transition-transform duration-300 ease-in-out `}>
+                                        {shopItems.map(item => (
+                                            <li key={item.id} className='cursor-pointer hover:bg-[var(--text-h)] hover:text-[#fff] rounded-sm'>
+                                                <Link
+                                                    to={item.route}
+                                                    onClick={() => setDropOpen(false)}
+                                                >
+                                                    <div className='p-4 transition-transform duration-200 hover:translate-x-1 ' >
+                                                        <p>{item.text}</p>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )
+                            }
                         </div>
                     </div>
                     <li className='p-1 cursor-pointer'><NavLink to='/karaoke' className={({ isActive }) => isActive ? 'underline' : ''}>Karaoke</NavLink></li>
@@ -91,24 +92,59 @@ function Navbar() {
             {/* mobile nav menu */}
             {
                 isOpen && (
-                    <ul className="lg:hidden md:grid-cols-3 md:grid-rows-2 absolute top-10/12 left-2 right-2 border-[#fff] rounded bg-white grid grid-cols-1 items-start gap-6 ">
+                    <ul id="nav-id" className="lg:hidden md:grid-cols-3 md:grid-rows-2 text-center text-[var(--text-h)] absolute top-10/12 left-2 right-2 py-2 border-[#fff] rounded-b-xl bg-white grid grid-cols-1 items-start gap-6 ">
                         {navItems.map(item => (
-                            <li
-                                key={item.id}
-                                className='rounded-xl cursor-pointer hover:bg-[var(--text-h)] hover:text-white'>
-                                <NavLink 
-                                to={item.route}
-                                className='block w-full p-2'
-                                onClick={() => setIsOpen(false)} //close menu on navigate
-                                >
-                                {item.text}
-                                </NavLink>
-                            </li>
+
+                            item.text === 'Shop' ? (
+                                <li key={item.id} className={`px-4 ${mobileDropOpen ? 'bg-[var(--text-h)] text-white py-2' : ''} `}>
+
+                                {/* Mobile shop dropdown trigger */}
+                                    <div
+                                        className="flex items-center  justify-center w-full cursor-pointer"
+                                        onClick={() => setMobileDropOpen(!mobileDropOpen)}
+                                    >
+                                        <span>{item.text}</span>
+                                        <IoIosArrowDown className={`${mobileDropOpen ? 'rotate-180' : 'rotate-0'} transition duration-300`} />
+                                    </div>
+
+                                    {/* Animated submenu */}
+                                    <ul className={`overflow-hidden transition-all duration-300 ease-in-out flex flex-col gap-1 px-2 ${mobileDropOpen ? 'max-h-40 opacity-100 mt-1 bg-[var(--text-h)] text-white' : 'max-h-0 opacity-0'}`}>
+                                        {shopItems.map(sub => (
+                                            <li key={sub.id} className='rounded-lg hover:bg-[var(--text-h)] hover:text-white'>
+                                                <Link
+                                                    to={sub.route}
+                                                    className='block w-full p-2 pl-4'
+                                                    onClick={() => { setIsOpen(false); setMobileDropOpen(false); }}
+                                                >
+                                                    <div className='hover:translate-x-1 transition-transform duration-200'>
+                                                        <p>{sub.text}</p>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            ) : (
+
+                                <li key={item.id} className='px-4'>
+                                    <NavLink
+                                        to={item.route}
+                                        className='block w-full '
+                                        onClick={() => setIsOpen(false)} //close menu on navigate
+                                    >
+                                        <div>
+                                            <p>
+                                                {item.text}
+                                            </p>
+                                        </div>
+                                    </NavLink>
+                                </li>
+                            )
                         ))}
                     </ul>
                 )
             }
-            
+
         </div>
     )
 }
