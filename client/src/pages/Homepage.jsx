@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import Carousel from '../components/Carousel';
 import RouteCard from '../components/RouteCard';
 import InstaPlugin from '../components/InstaPlugIn';
@@ -15,9 +16,9 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Homepage = () => {
 
     const homeCards = [
-        { id: 1, image: books, title: 'Book Shop', link: '/' },
-        { id: 2, image: kpop, title: 'K-Pop', link: '/' },
-        { id: 3, image: bake, title: 'Bake Shop', link: '/' }
+        { id: 1, image: books, title: 'Book Shop', link: '/shop/bookshop' },
+        { id: 2, image: kpop, title: 'K-Pop', link: '/shop/kpop' },
+        { id: 3, image: bake, title: 'Bake Shop', link: '/shop/bakery' }
     ]
 
     return (
@@ -36,6 +37,7 @@ const Homepage = () => {
                     </li>
                 ))}
             </ul>
+
             {/* About Section */}
             <section className="grid lg:grid-cols-2 w-full  justify-center items-center py-20 px-20 gap-5 bg-linear-to-l from-[#E79CD6]/50 to-[#E7AAD4]/50 to-[#E6ABC9]/50 to-[#E8B7D2]/50 to-[#F4C6D3]/50">
                 <div className="max-w-xl">
@@ -47,10 +49,12 @@ const Homepage = () => {
                     <p className='font-(family-name:--sans) lg:text-[1.375rem] md:text-xl text-lg'>
                         Our goal is to build a fun and supportive community where you can celebrate your favorite artists, authors, and more. Our physical store opened in <strong>Clemmons, NC</strong> in July 2024, and we’re excited to grow together with your support!
                     </p>
-                    <button id='cta' className='flex items-center gap-4 mt-6'>
-                        READ MORE
-                        <IoArrowForwardCircleOutline size={25} />
-                    </button>
+                    <Link to='/about'>
+                        <button id='cta' className='flex items-center gap-4 mt-6'>
+                            READ MORE
+                            <IoArrowForwardCircleOutline size={25} />
+                        </button>
+                    </Link>
                 </div>
                 <figure className="min-w-min">
                     <img src={front} alt="Kingdom's storefront" />
