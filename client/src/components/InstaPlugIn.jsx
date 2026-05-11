@@ -17,7 +17,7 @@ const InstaPlugin = () => {
 
     return (
         <div className="">
-            <figure class="mx-auto max-w-full w-100 h-auto">
+            <figure class="mx-auto max-w-full w-90 md:w-110 h-auto">
                 <div class="p-1.5 bg-[#3c3c3c] shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)] rounded-3xl">
                     <div className="bg-gray-900 bg-opacity-25 text-[#fff] rounded-2xl">
                         <div className="mb-2">
