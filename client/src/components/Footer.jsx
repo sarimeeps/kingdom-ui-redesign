@@ -1,3 +1,4 @@
+import {Link} from 'react-router';
 import whiteLogo from '../assets/kingdom-logo-white.png';
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
@@ -10,6 +11,7 @@ import { IoLogoTiktok } from "react-icons/io5";
 
 
 
+
 const Footer = () => {
     return (
         <footer className="relative w-full mx-auto">
@@ -17,9 +19,9 @@ const Footer = () => {
                 
                 {/* Logo */}
                 <div className="flex-1 order-last md:order-first md:mr-20 flex justify-center md:justify-start">
-                    <a href="/">
+                    <Link to="/">
                         <img src={whiteLogo} alt="Kingdom's Logo" className='h-26 w-auto object-contain'/>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Section 1 */}
