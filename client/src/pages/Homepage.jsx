@@ -9,6 +9,7 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { IoLogoFacebook } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io5";
 import { IoLogoTiktok } from "react-icons/io5";
+import { FaFacebookSquare } from "react-icons/fa";
 
 
 const Homepage = () => {
@@ -59,40 +60,64 @@ const Homepage = () => {
             {/* Socials Section */}
             <section className="grid lg:grid-cols-2 w-full py-20 px-6 gap-5">
 
-                <div className='w-100 h-150 order-last md:order-first bg-[var(--text)] rounded-xl'></div>
-
+                {/* <div className='w-100 h-150 order-last md:order-first bg-[var(--text)] rounded-xl'></div> */}
+                <article>
+                    <InstaPlugin />
+                </article>
                 <div className="flex flex-col gap-6 lg:text-left text-center ">
-                    <h1 className='my-6'>Follow Our Socials!</h1>
-                    <hr class="hidden md:block w-12 h-1 my-6 bg-[var(--text-h)] "></hr>
-                    <p>Catch up on new arrivals and restock as we post updates on social media!</p>
-                    <ul>
-                        <li className=' w-lg rounded-xl bg-gradient-to-r from-[#ffd600]  via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
-                            <a href="https://www.instagram.com/kingdomofkpopandmore/" 
+                    <h1 className='mt-6'>Follow Our Socials!</h1>
+                    <hr class="hidden md:block w-12 h-1 mb-6 bg-[var(--text-h)] "></hr>
+                    <p className='w-md font-(family-name:--sans) text-xl font-medium justify-center items-center'>Catch up on new arrivals and restock as we post updates on social media!</p>
+                    <ul className='flex flex-col gap-4 items-center md:items-start justify-center font-(family-name:--btn-font)'>
+                        <li className=' w-md rounded-2xl p-2 pl-4 bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
+                            <a  href="https://www.instagram.com/kingdomofkpopandmore/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='flex items-center gap-3 justify-start'>
+                                <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>
+                                <IoLogoInstagram size={30} className='bg-gradient-to-b from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%' />
+                                </div>
+                                <div className='flex flex-col text-left text-white'>
+                                    <p className='font-bold text-lg'>Instagram</p>
+                                    <p className='font-medium text-sm'>@kingdomofkpopandmore</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li className='w-md rounded-2xl bg-[#1E6ED5] p-2 pl-4'>
+                            <a 
+                            href="https://www.facebook.com/profile.php?id=61558391370752" 
                             target="_blank" 
-                            rel="noopener noreferrer" 
-                            className='flex items-center gap-3 justify-center md:justify-start'>
-                            <IoLogoInstagram size={40} color='white'/>
-                            <div className='flex flex-col text-left text-white'>
-                                <p>Instagram</p>
-                                <p>@kingdomofkpopandmore</p>
-                            </div>
+                            rel="noopener noreferrer"
+                            className='flex items-center gap-3 justify-start'
+                            >
+                                <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>   
+                                <FaFacebookSquare size={30} className='text-[#1e6ed5]' />
+                                </div>
+                                <div className='flex flex-col text-left text-white'>
+                                    <p className='font-bold text-lg'>Facebook</p>
+                                    <p className='font-medium text-sm'>@kingdomofkpopandmore</p>
+                                </div>
+                               
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.facebook.com/profile.php?id=61558391370752" target="_blank" rel="noopener noreferrer">
-                                Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.tiktok.com/@kingdomkpopandmore" target="_blank" rel="noopener noreferrer">
-                                Tiktok
+                        <li className=' w-md rounded-2xl bg-[#000000] p-2 pl-4'>
+                            <a 
+                            href="https://www.tiktok.com/@kingdomkpopandmore" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className='flex items-center gap-3 justify-start'
+                            >
+                                <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>
+                                <IoLogoTiktok size={30}  />
+                                </div>
+                                <div className='flex flex-col text-left text-white'>
+                                    <p className='font-bold text-lg'>Tiktok</p>
+                                    <p className='font-medium text-sm'>@kingdomkpopandmore</p>
+                                </div>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </section>
-            <section>
-                <InstaPlugin />
             </section>
         </div>
     )

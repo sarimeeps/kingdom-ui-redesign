@@ -45,7 +45,7 @@ function Navbar() {
                 </div>
 
                 {/* desktop nav links */}
-                <ul className='hidden lg:flex flex-1 justify-center gap-8 whitespace-nowrap rounded-xl text-[var(--text-h)] text-xl p-1 m-2'>
+                <ul id="nav-id" className='hidden lg:flex flex-1 justify-center gap-8 whitespace-nowrap rounded-xl text-[var(--text-h)] text-xl p-1 m-2'>
                     <li className='p-1 cursor-pointer'>Home</li>
 
                     <div className='flex flex-col relative' onMouseEnter={() => setDropOpen(true) } onMouseLeave={() => setDropOpen(false)}>
