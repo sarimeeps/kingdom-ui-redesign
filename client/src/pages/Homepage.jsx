@@ -6,6 +6,10 @@ import bake from '../assets/route_cards/baked-item.jpg';
 import kpop from '../assets/route_cards/kpop-items.png';
 import books from '../assets/route_cards/books.png';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { IoLogoFacebook } from "react-icons/io5";
+import { IoLogoInstagram } from "react-icons/io5";
+import { IoLogoTiktok } from "react-icons/io5";
+import { FaFacebookSquare } from "react-icons/fa";
 
 
 const Homepage = () => {
@@ -19,8 +23,10 @@ const Homepage = () => {
     return (
         <div className='w-full flex flex-col items-center justify-center mb-8'>
             <Carousel />
+
+            {/* Shop Cards Section */}
             <h1 id='slogan' className='text-center mt-16 mb-12'>"Feeding you through your eyes, ears, and mouth!"</h1>
-            <ul className="w-full justify-center items-center flex flex-col md:flex-row gap-6 lg:gap-15">
+            <ul className="w-full justify-center items-center flex flex-col mb-16 md:flex-row gap-6 lg:gap-15">
                 {homeCards.map(card => (
                     <li
                         key={card.id}
@@ -31,38 +37,87 @@ const Homepage = () => {
                 ))}
             </ul>
             {/* About Section */}
-            <section className="grid lg:grid-cols-2 w-full justify-center items-center py-20 px-6 gap-5 bg-linear-to-l from-[#E79CD6]/50 to-[#E7AAD4]/50 to-[#E6ABC9]/50 to-[#E8B7D2]/50 to-[#F4C6D3]/50">
-                <div >
+            <section className="grid lg:grid-cols-2 w-full  justify-center items-center py-20 px-20 gap-5 bg-linear-to-l from-[#E79CD6]/50 to-[#E7AAD4]/50 to-[#E6ABC9]/50 to-[#E8B7D2]/50 to-[#F4C6D3]/50">
+                <div className="max-w-xl">
                     <h1 className='lg:text-left text-center my-6'>Happy You're Here!</h1>
                     <hr class="hidden lg:block w-12 h-1 my-6 bg-[var(--text-h)] "></hr>
-                    <p className='font-(family-name:--sans) lg:text-[1.375rem] text-sm'>
+                    <p className='font-(family-name:--sans) lg:text-[1.375rem] md:text-xl text-lg'>
                         Welcome to Kingdom of K-pop, Romance Books, and Bake Shop! We are a small, woman-owned family business dedicated to creating a welcoming space for North Carolina’s K-pop fans, romance book lovers, and dessert enthusiasts.
+                    </p>
+                    <p className='font-(family-name:--sans) lg:text-[1.375rem] md:text-xl text-lg'>
                         Our goal is to build a fun and supportive community where you can celebrate your favorite artists, authors, and more. Our physical store opened in <strong>Clemmons, NC</strong> in July 2024, and we’re excited to grow together with your support!
                     </p>
-                    <button className='flex items-center gap-4 mt-6'>
-                        READ MORE 
+                    <button id='cta' className='flex items-center gap-4 mt-6'>
+                        READ MORE
                         <IoArrowForwardCircleOutline size={25} />
                     </button>
                 </div>
-                <figure>
-                    <img src={front} alt="Kingdom's storefront" className='h-auto w-full lg:w-(1/2)' />
+                <figure className="min-w-min">
+                    <img src={front} alt="Kingdom's storefront" />
                 </figure>
             </section>
-            {/* Socials Section */}
-            <section className="grid lg:grid-cols-2 w-full justify-center items-center py-20 px-6 gap-5">
-                <div className='w-100 h-150 order-last md:order-first justify-center bg-[var(--text)] rounded-xl'></div>
 
-                <div className="flex flex-col items-center gap-6">
-                    <h1>Follow Our Socials!</h1>
-                    <hr class="hidden md:block w-12 h-1 my-6 bg-[var(--text-h)] "></hr>
-                    <p>Catch up on new arrivals and restock as we post updates on social media!</p>
-                    <button>Instagram</button>
-                    <button>Facebook</button>
-                    <button>TikTok</button>
+            {/* Socials Section */}
+            <section className="grid lg:grid-cols-2 w-full py-20 px-6 gap-5">
+
+                {/* <div className='w-100 h-150 order-last md:order-first bg-[var(--text)] rounded-xl'></div> */}
+                <article>
+                    <InstaPlugin />
+                </article>
+                <div className="flex flex-col gap-6 lg:text-left text-center ">
+                    <h1 className='mt-6'>Follow Our Socials!</h1>
+                    <hr class="hidden md:block w-12 h-1 mb-6 bg-[var(--text-h)] "></hr>
+                    <p className='w-md font-(family-name:--sans) text-xl font-medium justify-center items-center'>Catch up on new arrivals and restock as we post updates on social media!</p>
+                    <ul className='flex flex-col gap-4 items-center md:items-start justify-center font-(family-name:--btn-font)'>
+                        <li className=' w-md rounded-2xl p-2 pl-4 bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
+                            <a  href="https://www.instagram.com/kingdomofkpopandmore/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='flex items-center gap-3 justify-start'>
+                                <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>
+                                <IoLogoInstagram size={30} className='bg-gradient-to-b from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%' />
+                                </div>
+                                <div className='flex flex-col text-left text-white'>
+                                    <p className='font-bold text-lg'>Instagram</p>
+                                    <p className='font-medium text-sm'>@kingdomofkpopandmore</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li className='w-md rounded-2xl bg-[#1E6ED5] p-2 pl-4'>
+                            <a 
+                            href="https://www.facebook.com/profile.php?id=61558391370752" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className='flex items-center gap-3 justify-start'
+                            >
+                                <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>   
+                                <FaFacebookSquare size={30} className='text-[#1e6ed5]' />
+                                </div>
+                                <div className='flex flex-col text-left text-white'>
+                                    <p className='font-bold text-lg'>Facebook</p>
+                                    <p className='font-medium text-sm'>@kingdomofkpopandmore</p>
+                                </div>
+                               
+                            </a>
+                        </li>
+                        <li className=' w-md rounded-2xl bg-[#000000] p-2 pl-4'>
+                            <a 
+                            href="https://www.tiktok.com/@kingdomkpopandmore" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className='flex items-center gap-3 justify-start'
+                            >
+                                <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>
+                                <IoLogoTiktok size={30}  />
+                                </div>
+                                <div className='flex flex-col text-left text-white'>
+                                    <p className='font-bold text-lg'>Tiktok</p>
+                                    <p className='font-medium text-sm'>@kingdomkpopandmore</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-            <section>
-                <InstaPlugin />
             </section>
         </div>
     )

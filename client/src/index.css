@@ -126,7 +126,6 @@ p {
   font-family: var(--sans);
   font-size: 1.375rem;
   font-weight: 600;
-  color: var(--button);
 }
 
 
@@ -153,7 +152,7 @@ p {
   text-decoration: none;
 } */
 
-button{
+#cta{
   font-family: var(--btn-font);
   font-size: 1rem;
   font-weight: 700;
