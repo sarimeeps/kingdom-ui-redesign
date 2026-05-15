@@ -73,7 +73,7 @@ const Homepage = () => {
                     <p className='lg:w-md font-(family-name:--sans) text-xl font-medium justify-center items-center'>Catch up on new arrivals and restock as we post updates on social media!</p>
                     <ul className='flex flex-col gap-6 mt-4 items-center lg:items-start justify-center font-(family-name:--btn-font)'>
                         {/* <li className='w-sm md:w-md rounded-2xl p-2 pl-4 bg-linear-to-r from-[#7638FA] from-[21%] via-[#E90097] via-[80%] via-[#FF0069] via-[85%] via-[#FF7A00] via-[90%] to-[#FFD600] to-[100%]'> */}
-                             <li className='w-sm md:w-md rounded-2xl p-2 pl-4 bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
+                             <li className='w-sm md:w-md rounded-2xl p-2 pl-4 transition-transform duration-200 hover:translate-y-[-5px] bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
                             <a href="https://www.instagram.com/kingdomofkpopandmore/"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -88,7 +88,7 @@ const Homepage = () => {
                                 </div>
                             </a>
                         </li>
-                        <li className='w-sm md:w-md rounded-2xl bg-[#1E6ED5] p-2 pl-4'>
+                        <li className='w-sm md:w-md rounded-2xl bg-[#1E6ED5] p-2 pl-4 transition-transform duration-200 hover:translate-y-[-5px]'>
                             <a
                                 href="https://www.facebook.com/profile.php?id=61558391370752"
                                 target="_blank"
@@ -105,7 +105,7 @@ const Homepage = () => {
 
                             </a>
                         </li>
-                        <li className='w-sm md:w-md rounded-2xl bg-[#000000] p-2 pl-4'>
+                        <li className='w-sm md:w-md rounded-2xl bg-[#000000] p-2 pl-4 transition-transform duration-200 hover:translate-y-[-5px]'>
                             <a
                                 href="https://www.tiktok.com/@kingdomkpopandmore"
                                 target="_blank"
