@@ -48,11 +48,9 @@ const Homepage = () => {
                         <p className='font-(family-name:--sans) text-center lg:text-left lg:text-[1.375rem] md:text-xl text-lg'>
                             Our goal is to build a fun and supportive community where you can celebrate your favorite artists, authors, and more. Our physical store opened in <strong>Clemmons, NC</strong> in July 2024, and we’re excited to grow together with your support!
                         </p>
-                        <Link to='/about'>
-                            <button id='cta' className='flex mx-auto lg:mx-0 items-center gap-4 mt-6'>
+                        <Link to='/about' id='cta' className='border w-fit flex mx-auto lg:mx-0 items-center gap-4 mt-6'>
                                 READ MORE
                                 <IoArrowForwardCircleOutline size={25} />
-                            </button>
                         </Link>
                     </div>
                     <figure className="min-w-min p-0 justify-items-center lg:justify-items-end">
