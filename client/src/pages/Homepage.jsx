@@ -6,6 +6,8 @@ import front from '../assets/kingdom_front.png'
 import bake from '../assets/route_cards/baked-item.jpg';
 import kpop from '../assets/route_cards/kpop-items.png';
 import books from '../assets/route_cards/books.png';
+import Insta from '../components/InstaLogo';
+import Tiktok from '../components/TiktokLogo';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { IoLogoFacebook } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io5";
@@ -61,22 +63,24 @@ const Homepage = () => {
                 </div>
             </section>
             {/* Socials Section */}
-            <section className="max-w-[1920px] w-full gap-20 lg:gap-40 grid lg:grid-cols-2 pt-4 md:mt-40 mb-16 lg:-mb-20">
+            <section className="max-w-[1920px] w-full gap-20 lg:gap-40 grid lg:grid-cols-2 md:mt-40 mb-16 lg:-mb-20">
                 <article className='hidden lg:block lg:justify-self-end'>
                     <InstaPlugin />
                 </article>
-                <div className="flex flex-col gap-6 lg:ml-6 lg:text-left text-center mx-auto lg:mx-0">
+                <div className="flex flex-col gap-6 md:py-6 lg:ml-6 lg:text-left text-center mx-auto lg:mx-0">
                     <h1 className='mt-6'>Follow Our Socials!</h1>
                     <hr class="hidden lg:block w-12 h-1 mb-6 bg-[var(--text-h)] "></hr>
                     <p className='lg:w-md font-(family-name:--sans) text-xl font-medium justify-center items-center'>Catch up on new arrivals and restock as we post updates on social media!</p>
                     <ul className='flex flex-col gap-6 mt-4 items-center lg:items-start justify-center font-(family-name:--btn-font)'>
-                        <li className='w-sm md:w-md rounded-2xl p-2 pl-4 bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
+                        {/* <li className='w-sm md:w-md rounded-2xl p-2 pl-4 bg-linear-to-r from-[#7638FA] from-[21%] via-[#E90097] via-[80%] via-[#FF0069] via-[85%] via-[#FF7A00] via-[90%] to-[#FFD600] to-[100%]'> */}
+                             <li className='w-sm md:w-md rounded-2xl p-2 pl-4 bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
                             <a href="https://www.instagram.com/kingdomofkpopandmore/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className='flex items-center gap-3 justify-start'>
                                 <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>
-                                    <IoLogoInstagram size={30} className='bg-gradient-to-b from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%' />
+                                    <Insta size={30} />
+
                                 </div>
                                 <div className='flex flex-col text-left text-white'>
                                     <p className='font-bold text-lg'>Instagram</p>
@@ -109,7 +113,7 @@ const Homepage = () => {
                                 className='flex items-center gap-3 justify-start'
                             >
                                 <div className='w-12 h-12 object-contain rounded-full bg-white flex items-center justify-center'>
-                                    <IoLogoTiktok size={30} />
+                                    <Tiktok size={30} />
                                 </div>
                                 <div className='flex flex-col text-left text-white'>
                                     <p className='font-bold text-lg'>Tiktok</p>
