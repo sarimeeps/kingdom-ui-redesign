@@ -132,26 +132,13 @@ p {
 
 #footer-id h3 {
   font-family: var(--btn-font);
-  font-weight: 400;
-  font-size: 1.125rem;
+  font-weight: 500;
   color: var(--bg);
   list-style: none;
   padding: 0;
   margin: 0 0 0.5rem;
-  /* border: rosybrown solid 1px; */
 }
 
-#footer-id li, #footer-id p {
-  font-family: var(--sans);
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--bg);
-  /* border: red solid 1px; */
-}
-
-/* a {
-  text-decoration: none;
-} */
 
 #cta{
   font-family: var(--btn-font);
