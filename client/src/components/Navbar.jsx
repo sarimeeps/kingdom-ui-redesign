@@ -40,7 +40,7 @@ function Navbar() {
                     <Menu size={27} />
                 </div>
                 {/* nav logo  */}
-                <div id="logo" className='absolute left-1/2 -translate-x-1/2 flex-shrink-0 h-13  lg:static lg:translate-x-0'>
+                <div id="logo" className='absolute left-1/2 -translate-x-1/2 flex-shrink-0 lg:h-16 h-13 lg:static lg:translate-x-0'>
                     <Link to="/">
                         <img src={logo} alt="kingdom-logo" className='h-full object-contain' />
                     </Link>
@@ -67,7 +67,7 @@ function Navbar() {
                                                     to={item.route}
                                                     onClick={() => setDropOpen(false)}
                                                 >
-                                                    <div className='p-4 transition-transform duration-200 hover:translate-x-1 ' >
+                                                    <div className='p-4 font-normal transition-transform duration-200 hover:font-semibold hover:translate-x-1' >
                                                         <p>{item.text}</p>
                                                     </div>
                                                 </Link>
@@ -92,7 +92,7 @@ function Navbar() {
             {/* mobile nav menu */}
             {
                 isOpen && (
-                    <ul id="nav-id" className="lg:hidden text-center absolute top-10/12 left-2 right-2 py-2 border-[#fff] rounded-b-xl bg-white grid grid-cols-1 items-start gap-6 ">
+                    <ul id="nav-id" className="lg:hidden text-center absolute top-10/12 left-2 right-2 border border-[#fff] rounded-b-xl bg-white grid grid-cols-1 items-start">
                         {navItems.map(item => (
 
                             item.text === 'Shop' ? (
@@ -100,7 +100,7 @@ function Navbar() {
 
                                     {/* Mobile shop dropdown trigger */}
                                     <div
-                                        className={`flex items-center justify-center w-full py-2 font-semibold cursor-pointer ${mobileDropOpen ? 'bg-[var(--button)] text-[white]' : 'text-[var(--text-h)]'}`}
+                                        className={`flex items-center justify-center w-full py-2 font-semibold cursor-pointer ${mobileDropOpen ? 'bg-[var(--button)] text-[white]' : 'text-[var(--text-h)]'} hover:bg-[var(--text-h)] hover:text-[var(--bg)]`}
                                         onClick={() => setMobileDropOpen(!mobileDropOpen)}
                                     >
                                         <span>{item.text}</span>
@@ -113,10 +113,10 @@ function Navbar() {
                                             <li key={sub.id} className='text-[var(--text-h)]'>
                                                 <Link
                                                     to={sub.route}
-                                                    className='block w-full p-2'
+                                                    className='block w-full'
                                                     onClick={() => { setIsOpen(false); setMobileDropOpen(false); }}
                                                 >
-                                                    <div className='transition-transform duration-200 hover:translate-x-1'>
+                                                    <div className='p-2 transition-transform duration-200 hover:translate-x-1 hover:font-semibold'>
                                                         <p>{sub.text}</p>
                                                     </div>
                                                 </Link>
@@ -134,11 +134,9 @@ function Navbar() {
                                         className='block w-full  '
                                         onClick={() => setIsOpen(false)} //close menu on navigate
                                     >
-                                        <div>
-                                            <p>
+                                            <p className='p-3 active:bg-[var(--button)] active:text-[var(--bg)] hover:bg-[var(--text-h)] hover:text-[var(--bg)]'>
                                                 {item.text}
                                             </p>
-                                        </div>
                                     </NavLink>
                                 </li>
                             )
