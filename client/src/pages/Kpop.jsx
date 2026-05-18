@@ -1,8 +1,12 @@
 import React from 'react'
+import NewArrivals from '../components/NewArrivals'
 
 const Kpop = () => {
   return (
-    <div>Kpop</div>
+    <div>
+      <h1>Kpop</h1>
+      <NewArrivals />
+    </div>
   )
 }
 
