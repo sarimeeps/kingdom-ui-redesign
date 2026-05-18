@@ -50,9 +50,9 @@ const Homepage = () => {
                         <p className='font-(family-name:--sans) text-center lg:text-left lg:text-[1.375rem] md:text-xl text-lg'>
                             Our goal is to build a fun and supportive community where you can celebrate your favorite artists, authors, and more. Our physical store opened in <strong>Clemmons, NC</strong> in July 2024, and we’re excited to grow together with your support!
                         </p>
-                        <Link to='/about' id='cta' className='border w-fit flex mx-auto lg:mx-0 items-center gap-4 mt-6'>
+                        <Link to='/about' className='w-fit flex mx-auto lg:mx-0 items-center gap-4 mt-6 text-[#ffffff] font-(family-name:--btn-font) lg:text-base md:text-sm font-bold bg-[var(--button)] border-2 border-white rounded-2xl px-4 py-2 active:bg-[var(--text-h)] active:font-extrabold'>
                                 READ MORE
-                                <IoArrowForwardCircleOutline size={25} />
+                                <IoArrowForwardCircleOutline size={25}/>
                         </Link>
                     </div>
                     <figure className="min-w-min p-0 justify-items-center lg:justify-items-end">
@@ -60,6 +60,7 @@ const Homepage = () => {
                     </figure>
                 </div>
             </section>
+
             {/* Socials Section */}
             <section className="max-w-[1920px] w-full gap-20 lg:gap-40 grid lg:grid-cols-2 md:mt-40 mb-16 lg:-mb-20">
                 <article className='hidden lg:block lg:justify-self-end'>
@@ -71,7 +72,7 @@ const Homepage = () => {
                     <p className='lg:w-md font-(family-name:--sans) text-xl font-medium justify-center items-center'>Catch up on new arrivals and restock as we post updates on social media!</p>
                     <ul className='flex flex-col gap-6 mt-4 items-center lg:items-start justify-center font-(family-name:--btn-font)'>
                         {/* <li className='w-sm md:w-md rounded-2xl p-2 pl-4 bg-linear-to-r from-[#7638FA] from-[21%] via-[#E90097] via-[80%] via-[#FF0069] via-[85%] via-[#FF7A00] via-[90%] to-[#FFD600] to-[100%]'> */}
-                             <li className='w-sm md:w-md rounded-2xl p-2 pl-4 transition-transform duration-200 hover:translate-y-[-5px] bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
+                            <li className='w-sm md:w-md rounded-2xl p-2 pl-4 transition-transform duration-200 hover:translate-y-[-5px] bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
                             <a href="https://www.instagram.com/kingdomofkpopandmore/"
                                 target="_blank"
                                 rel="noopener noreferrer"
