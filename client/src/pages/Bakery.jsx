@@ -8,16 +8,13 @@ import customcake from '../assets/bake_shop/customcake.jpg'
 
 const Bakery = () => {
 
-  const bakeInventory = [
-    { title: 'Assorted Cookies', }
-  ]
-
-
+  
   return (
     <div className='flex flex-col items-center bg-[var(--bg)]'>
       <h1 className='m-6'>Our Baked Goods</h1>
-      <section>
-        <BakeCard
+      <section className='w-full flex justify-center'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 md:gap-6 lg:gap-0'>
+          <BakeCard
           title='Assorted Cookies'
           desc='$4.00 each or 3 for $10.00'
           image={cookies}
@@ -79,6 +76,8 @@ const Bakery = () => {
             }
           ]}
         />
+        </div>
+        
       </section>
       <section className='w-full justify-items-center mt-20 p-20 bg-linear-to-l from-[#E79CD6]/50 to-[#E7AAD4]/50 to-[#E6ABC9]/50 to-[#E8B7D2]/50 to-[#F4C6D3]/50'>
         
