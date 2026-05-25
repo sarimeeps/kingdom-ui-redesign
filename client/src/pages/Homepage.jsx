@@ -43,7 +43,7 @@ const Homepage = () => {
                 <div className="grid lg:grid-cols-2 max-w-[1920px] gap-10">
                     <div className="max-w-2xl w-full mx-auto mb-12">
                         <h1 className='lg:text-left text-center my-6 lg:mt-6'>Happy You're Here!</h1>
-                        <hr class="hidden lg:block w-12 h-1 mb-9 mt-2 bg-[var(--text-h)] "></hr>
+                        <hr className="hidden lg:block w-12 h-1 mb-9 mt-2 bg-[var(--text-h)] "></hr>
                         <p className='font-(family-name:--sans) text-center lg:text-left lg:text-[1.375rem] md:text-xl text-lg'>
                             Welcome to Kingdom of K-pop, Romance Books, and Bake Shop! We are a small, woman-owned family business dedicated to creating a welcoming space for North Carolina’s K-pop fans, romance book lovers, and dessert enthusiasts.
                         </p>

@@ -119,6 +119,7 @@ h3 {
 
 p {
   margin: 0;
+  font-family: var(--sans);
 }
 
 
