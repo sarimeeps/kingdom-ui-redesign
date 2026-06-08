@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { PiArrowCircleRight } from "react-icons/pi";
 import books from '../assets/book_shop/bookclub.jpg';
+import BookItem from '../components/BookItem.jsx';
 
 const Bookstore = () => {
 
@@ -26,7 +27,7 @@ const Bookstore = () => {
           </div>
         </div>
       </section>
-      <section className='bg-[var(--bg)] w-full max-w-[1920px] flex flex-col items-center'>
+      <section className='bg-[var(--bg)] w-full flex flex-col items-center'>
         <h1 className='border mt-16 pb-6'>Our Books</h1>
         <div className='flex flex-row justify-center border max-w-200 w-full'>
           <div className='w-full text-center'>
@@ -36,7 +37,7 @@ const Bookstore = () => {
             <p className='p-5'>Genre Filter</p>
           </div>
         </div>
-        <div className='flex flex-row border max-w-400 w-full p-6'>
+        <div className='flex flex-row border max-w-380 w-full p-6'>
           <div className='w-full text-start'>
             <p>In Stock</p>
           </div>
@@ -44,15 +45,14 @@ const Bookstore = () => {
             <p>Available in-store only</p>
           </div>
         </div>
-        <div className='border max-w-400 w-full grid grid-cols-4 gap-4'>
-          <div>01</div>
-          <div>02</div>
-          <div>03</div>
-          <div>04</div>
-          <div>05</div>
-          <div>06</div>
-          <div>07</div>
-          <div>08</div>
+        <div className='max-w-390 w-full grid grid-cols-4 gap-y-6'>
+          <div className='content-center mx-auto '>
+            <BookItem 
+            title='She Gets The Girl'
+            author='Racheal Lippincott and Alyson Derrick'
+            price='12.99'
+          />
+          </div>
         </div>
       </section>
     </div>
