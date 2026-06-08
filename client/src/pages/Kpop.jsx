@@ -2,6 +2,7 @@ import React from 'react'
 import NewArrivals from '../components/NewArrivals'
 import carousel1 from '../assets/home_carousel/carousel1.png';
 import StoreFilter from '../components/StoreFilter';
+import KpopListing from '../components/KpopListing';
 
 const Kpop = () => {
 
@@ -32,8 +33,24 @@ const Kpop = () => {
       <NewArrivals />
       <h1 className='text-center mt-6'>Our Products</h1>
       <StoreFilter filters={filters} onChange={(vals) => console.log(vals)} />
+      <p className="text-center italic ">
+        *Holds available for <span className="italic font-bold">1 week</span>
+      </p>
+      <section className="flex items-end">
+        <div className="flex flex-row items-start justify-center gap-2">
+          <input type="checkbox" className="appearance-none h-4 w-4 justify-center cursor-pointer border-2 rounded-sm border-[var(--button)] accent-[var(--button)] " checked/>
+          <p className="justify-center">in stock</p>
+        </div>
+        <p className="justify-center flex-end">Available in-store only</p>
+      </section>
+      {/* <KpopListing
+      image={carousel1}
+      title='DK x Seungkwan - Serenade'
+      artist='DK x Seungkwan'
+      price='$25.00"
+      /> */}
     </div>
   )
 }
 
-export default Kpop
+export default Kpop;

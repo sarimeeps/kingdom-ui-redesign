@@ -10,7 +10,6 @@ import Karaoke from './pages/Karaoke'
 import Events from './pages/Events'
 import Faq from './pages/Faq'
 import Kpop from './pages/Kpop'
-
 import Footer from './components/Footer'
 
 function App() {

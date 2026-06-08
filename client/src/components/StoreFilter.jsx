@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import Select from 'react-select';
+import { IoIosArrowDown } from "react-icons/io";
+
 
 const StoreFilter = ({ filters = [], onChange }) => {
 
@@ -11,15 +14,15 @@ const StoreFilter = ({ filters = [], onChange }) => {
         onChange?.(next);            // lift state up
     };
 
-    // const handleReset = () => {
-    //     setValues(initialValues);
-    //     onChange?.(initialValues);
-    // }
+    const handleReset = () => {
+        setValues(initialValues);
+        onChange?.(initialValues);
+    }
 
-    // const activeCount = Object.values(values).filter(Boolean).length;
+    const activeCount = Object.values(values).filter(Boolean).length;
 
     return (
-        <div  className="flex justify-center items-center gap-4 py-6">
+        <div className="flex justify-center items-center gap-4 py-6">
             {filters.map((f) => (
                 <div key={f.key} className="border-b-2">
                     <label className='hidden'>
@@ -43,6 +46,8 @@ const StoreFilter = ({ filters = [], onChange }) => {
                             value={values[f.key]}
                             onChange={e => handleChange(f.key, e.target.value)} />
                     )} */}
+                    <IoIosArrowDown className='absolute right-0 top-1/2 transform -translate-y-1/2 text-[var(--text-h)]' />
+
                 </div>
             ))}
         </div>
