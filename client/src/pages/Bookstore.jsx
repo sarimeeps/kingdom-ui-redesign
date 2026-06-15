@@ -1,10 +1,30 @@
 import React from 'react'
+import { useState } from 'react';
 import { Link } from 'react-router'
 import { PiArrowCircleRight } from "react-icons/pi";
-import books from '../assets/book_shop/bookclub.jpg';
+import bookclub from '../assets/book_shop/bookclub.jpg';
 import BookItem from '../components/BookItem.jsx';
+import Pagination from '../components/Pagination.jsx';
 
 const Bookstore = () => {
+
+  //dummy book inventory
+  const books = [
+    { title: 'She Gets The Girl', author: 'Rachael Lippincott and Alyson Derrick', price: '12.99' },
+    { title: 'Heartstopper', author: 'Alice Oseman', price: '14.99' },
+    { title: 'How (Not to Conjure a Boyfriend', author: 'Jordan Greene', price: '9.99' },
+    { title: 'One Last Stop', author: 'Casey McQuiston', price: '16.99' },
+    {title: 'The Hunger Games', author: 'Suzanne Collins', price: '15.99'}
+
+  ]
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [cardsPerPage, setCardsPerPage] = useState(2);
+
+  const lastCardIndex = currentPage * cardsPerPage;
+  const firstCardIndex = lastCardIndex - cardsPerPage;
+
+  const currentCards = books.slice(firstCardIndex, lastCardIndex);
 
 
   return (
@@ -23,7 +43,7 @@ const Bookstore = () => {
         </div>
         <div className='flex justify-center'>
           <div className='aspect-[4/3] max-h-110 max-w-170 overflow-hidden border rounded-xl border-transparent'>
-            <img src={books} alt="" className='w-full h-full object-cover' />
+            <img src={bookclub} alt="" className='w-full h-full object-cover' />
           </div>
         </div>
       </section>
@@ -45,15 +65,19 @@ const Bookstore = () => {
             <p>Available in-store only</p>
           </div>
         </div>
-        <div className='max-w-390 w-full grid grid-cols-4 gap-y-6'>
-          <div className='content-center mx-auto '>
-            <BookItem 
-            title='She Gets The Girl'
-            author='Racheal Lippincott and Alyson Derrick'
-            price='12.99'
-          />
-          </div>
-        </div>
+        <ul className='max-w-390 w-full grid grid-cols-4 gap-y-6 border'>
+          {currentCards.map((book, index) => (
+            <li key={index} className='content-center mx-auto'>
+              <BookItem title={book.title} author={book.author} price={book.price} />
+            </li>
+          ))}
+        </ul>
+        <Pagination 
+        totalCards={books.length} 
+        cardsPerPage={cardsPerPage} 
+        setCurrentPage={setCurrentPage} 
+        currentPage={currentPage}
+        />
       </section>
     </div>
   )
