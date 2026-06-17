@@ -6,12 +6,12 @@ const Pagination = ({ totalCards, cardsPerPage, setCurrentPage, currentPage }) =
     }
 
     return (
-        <div className="border w-13 h-13">
+        <div className="border flex justify-center w-50 gap-2">
             {pages.map((page, index) => {
                 return <button 
                 key={index} 
                 onClick={() => setCurrentPage(page)}
-                className={page == currentPage ? 'text-2xl' : ''}
+                className={page == currentPage ? 'font-bold text-2xl -translate-y-1 text-[var(--text-h)]' : 'text-xl text-[var(--text)] cursor-pointer'}
                 >
                     {page}
                 </button>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router'
 import { PiArrowCircleRight } from "react-icons/pi";
@@ -6,20 +6,38 @@ import bookclub from '../assets/book_shop/bookclub.jpg';
 import BookItem from '../components/BookItem.jsx';
 import Pagination from '../components/Pagination.jsx';
 
+
+
 const Bookstore = () => {
 
-  //dummy book inventory
-  const books = [
-    { title: 'She Gets The Girl', author: 'Rachael Lippincott and Alyson Derrick', price: '12.99' },
-    { title: 'Heartstopper', author: 'Alice Oseman', price: '14.99' },
-    { title: 'How (Not to Conjure a Boyfriend', author: 'Jordan Greene', price: '9.99' },
-    { title: 'One Last Stop', author: 'Casey McQuiston', price: '16.99' },
-    {title: 'The Hunger Games', author: 'Suzanne Collins', price: '15.99'}
+  //  {
+  //       "id": ,
+  //       "title": ,
+  //       "author": ,
+  //       "price": ,
+  //       "cover": ,
+  //       "status"
+  //   },
 
-  ]
+  const [books, setBooks] = useState([])
+
+  useEffect(() => {
+    fetch("/data/books.json")
+    .then(res => {
+      if(!res.ok){
+        throw new Error("Failed to load books")
+      }
+      return res.json();
+    })
+    .then(data => setBooks(data))
+    .catch(err => console.error(err))
+  }, [])
+
+
+  
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(2);
+  const [cardsPerPage, setCardsPerPage] = useState(12);
 
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
@@ -68,15 +86,15 @@ const Bookstore = () => {
         <ul className='max-w-390 w-full grid grid-cols-4 gap-y-6 border'>
           {currentCards.map((book, index) => (
             <li key={index} className='content-center mx-auto'>
-              <BookItem title={book.title} author={book.author} price={book.price} />
+              <BookItem cover={book.cover} title={book.title} author={book.author} price={book.price} />
             </li>
           ))}
         </ul>
-        <Pagination 
-        totalCards={books.length} 
-        cardsPerPage={cardsPerPage} 
-        setCurrentPage={setCurrentPage} 
-        currentPage={currentPage}
+        <Pagination
+          totalCards={books.length}
+          cardsPerPage={cardsPerPage}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
         />
       </section>
     </div>
