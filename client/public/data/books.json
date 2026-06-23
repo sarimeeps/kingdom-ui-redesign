@@ -350,5 +350,469 @@
         "price": 15.99,
         "cover": "/book_covers/book44.jpg",
         "status": true
-    }
+    },
+    {
+    "id": 45,
+    "title": "She Gets The Girl",
+    "author": "Racheal Lippioncott & Alyson Derrick",
+    "price": 12.99,
+    "cover": "/book_covers/book1.jpg",
+    "status": true
+},
+{
+    "id": 46,
+    "title": "Heartstopper",
+    "author": "Alice Oseman",
+    "price": 14.99,
+    "cover": "/book_covers/book2.jpg",
+    "status": true
+},
+{
+    "id": 47,
+    "title": "How Not to Conjure a Boyfriend",
+    "author": "Jordan Greene",
+    "price": 9.99,
+    "cover": "/book_covers/book3.jpg",
+    "status": true
+},
+{
+    "id": 48,
+    "title": "One Last Stop",
+    "author": "Casey McQuiston",
+    "price": 16.99,
+    "cover": "/book_covers/book4.jpg",
+    "status": true
+},
+{
+    "id": 49,
+    "title": "Haunting Adeline",
+    "author": "H.D. Carlton",
+    "price": 14.99,
+    "cover": "/book_covers/book5.jpg",
+    "status": true
+},
+{
+    "id": 50,
+    "title": "The Cute Psycho",
+    "author": "Veronica Lancet",
+    "price": 19.99,
+    "cover": "/book_covers/book6.jpg",
+    "status": true
+},
+{
+    "id": 51,
+    "title": "Your Knife, My Heart",
+    "author": "K.M. Moronova",
+    "price": 18.99,
+    "cover": "/book_covers/book7.jpg",
+    "status": true
+},
+{
+    "id": 52,
+    "title": "Violent Desire",
+    "author": "Ariana Nash",
+    "price": 10.99,
+    "cover": "/book_covers/book8.jpg",
+    "status": false
+},
+{
+    "id": 53,
+    "title": "Can Love Ever Be Just Like In The Movies",
+    "author": "Heidi Rice",
+    "price": 15.99,
+    "cover": "/book_covers/book9.jpg",
+    "status": true
+},
+{
+    "id": 54,
+    "title": "Dessert For Stressed People",
+    "author": "Letizia Lorini",
+    "price": 10.99,
+    "cover": "/book_covers/book10.jpg",
+    "status": false
+},
+{
+    "id": 55,
+    "title": "A Cuban Girl's Guide to Tea and Tomorrow",
+    "author": "Laura Taylor Namey",
+    "price": 8.99,
+    "cover": "/book_covers/book11.jpg",
+    "status": true
+},
+{
+    "id": 56,
+    "title": "She Gets The Girl",
+    "author": "Racheal Lippioncott & Alyson Derrick",
+    "price": 12.99,
+    "cover": "/book_covers/book1.jpg",
+    "status": true
+},
+{
+    "id": 57,
+    "title": "Heartstopper",
+    "author": "Alice Oseman",
+    "price": 14.99,
+    "cover": "/book_covers/book2.jpg",
+    "status": true
+},
+{
+    "id": 58,
+    "title": "How Not to Conjure a Boyfriend",
+    "author": "Jordan Greene",
+    "price": 9.99,
+    "cover": "/book_covers/book3.jpg",
+    "status": true
+},
+{
+    "id": 59,
+    "title": "One Last Stop",
+    "author": "Casey McQuiston",
+    "price": 16.99,
+    "cover": "/book_covers/book4.jpg",
+    "status": true
+},
+{
+    "id": 60,
+    "title": "Haunting Adeline",
+    "author": "H.D. Carlton",
+    "price": 14.99,
+    "cover": "/book_covers/book5.jpg",
+    "status": true
+},
+{
+    "id": 61,
+    "title": "The Cute Psycho",
+    "author": "Veronica Lancet",
+    "price": 19.99,
+    "cover": "/book_covers/book6.jpg",
+    "status": true
+},
+{
+    "id": 62,
+    "title": "Your Knife, My Heart",
+    "author": "K.M. Moronova",
+    "price": 18.99,
+    "cover": "/book_covers/book7.jpg",
+    "status": true
+},
+{
+    "id": 63,
+    "title": "Violent Desire",
+    "author": "Ariana Nash",
+    "price": 10.99,
+    "cover": "/book_covers/book8.jpg",
+    "status": false
+},
+{
+    "id": 64,
+    "title": "Can Love Ever Be Just Like In The Movies",
+    "author": "Heidi Rice",
+    "price": 15.99,
+    "cover": "/book_covers/book9.jpg",
+    "status": true
+},
+{
+    "id": 65,
+    "title": "She Gets The Girl",
+    "author": "Racheal Lippioncott & Alyson Derrick",
+    "price": 12.99,
+    "cover": "/book_covers/book1.jpg",
+    "status": true
+},
+{
+    "id": 66,
+    "title": "Heartstopper",
+    "author": "Alice Oseman",
+    "price": 14.99,
+    "cover": "/book_covers/book2.jpg",
+    "status": true
+},
+{
+    "id": 67,
+    "title": "How Not to Conjure a Boyfriend",
+    "author": "Jordan Greene",
+    "price": 9.99,
+    "cover": "/book_covers/book3.jpg",
+    "status": true
+},
+{
+    "id": 68,
+    "title": "One Last Stop",
+    "author": "Casey McQuiston",
+    "price": 16.99,
+    "cover": "/book_covers/book4.jpg",
+    "status": true
+},
+{
+    "id": 69,
+    "title": "Haunting Adeline",
+    "author": "H.D. Carlton",
+    "price": 14.99,
+    "cover": "/book_covers/book5.jpg",
+    "status": true
+},
+{
+    "id": 70,
+    "title": "The Cute Psycho",
+    "author": "Veronica Lancet",
+    "price": 19.99,
+    "cover": "/book_covers/book6.jpg",
+    "status": true
+},
+{
+    "id": 71,
+    "title": "Your Knife, My Heart",
+    "author": "K.M. Moronova",
+    "price": 18.99,
+    "cover": "/book_covers/book7.jpg",
+    "status": true
+},
+{
+    "id": 72,
+    "title": "Violent Desire",
+    "author": "Ariana Nash",
+    "price": 10.99,
+    "cover": "/book_covers/book8.jpg",
+    "status": false
+},
+{
+    "id": 73,
+    "title": "Can Love Ever Be Just Like In The Movies",
+    "author": "Heidi Rice",
+    "price": 15.99,
+    "cover": "/book_covers/book9.jpg",
+    "status": true
+},
+{
+    "id": 74,
+    "title": "Dessert For Stressed People",
+    "author": "Letizia Lorini",
+    "price": 10.99,
+    "cover": "/book_covers/book10.jpg",
+    "status": false
+},
+{
+    "id": 75,
+    "title": "A Cuban Girl's Guide to Tea and Tomorrow",
+    "author": "Laura Taylor Namey",
+    "price": 8.99,
+    "cover": "/book_covers/book11.jpg",
+    "status": true
+},
+{
+    "id": 76,
+    "title": "I Was Born For This",
+    "author": "Alice Oseman",
+    "price": 12.99,
+    "cover": "/book_covers/book37.jpg",
+    "status": true
+},
+{
+    "id": 77,
+    "title": "Loveless",
+    "author": "Alice Oseman",
+    "price": 15.99,
+    "cover": "/book_covers/book38.jpg",
+    "status": true
+},
+{
+    "id": 78,
+    "title": "The Fae Queen's Captive",
+    "author": "Sierra Simone",
+    "price": 18.99,
+    "cover": "/book_covers/book41.jpg",
+    "status": true
+},
+{
+    "id": 79,
+    "title": "Love Contract",
+    "author": "Sophie Lark",
+    "price": 12.99,
+    "cover": "/book_covers/book40.jpg",
+    "status": true
+},
+{
+    "id": 80,
+    "title": "Starlet",
+    "author": "Sophie Lark",
+    "price": 15.99,
+    "cover": "/book_covers/book41.jpg",
+    "status": true
+},
+{
+    "id": 81,
+    "title": "Servant Of Earth",
+    "author": "Sarah Hawley",
+    "price": 19.99,
+    "cover": "/book_covers/book42.jpg",
+    "status": true
+},
+{
+    "id": 82,
+    "title": "Radio Silence",
+    "author": "Alice Oseman",
+    "price": 18.99,
+    "cover": "/book_covers/book43.jpg",
+    "status": true
+},
+{
+    "id": 83,
+    "title": "Honey Cut",
+    "author": "Sierra Simone",
+    "price": 15.99,
+    "cover": "/book_covers/book44.jpg",
+    "status": true
+},
+{
+    "id": 84,
+    "title": "She Gets The Girl",
+    "author": "Racheal Lippioncott & Alyson Derrick",
+    "price": 12.99,
+    "cover": "/book_covers/book1.jpg",
+    "status": true
+},
+{
+    "id": 85,
+    "title": "Heartstopper",
+    "author": "Alice Oseman",
+    "price": 14.99,
+    "cover": "/book_covers/book2.jpg",
+    "status": true
+},
+{
+    "id": 86,
+    "title": "How Not to Conjure a Boyfriend",
+    "author": "Jordan Greene",
+    "price": 9.99,
+    "cover": "/book_covers/book3.jpg",
+    "status": true
+},
+{
+    "id": 87,
+    "title": "One Last Stop",
+    "author": "Casey McQuiston",
+    "price": 16.99,
+    "cover": "/book_covers/book4.jpg",
+    "status": true
+},
+{
+    "id": 88,
+    "title": "Haunting Adeline",
+    "author": "H.D. Carlton",
+    "price": 14.99,
+    "cover": "/book_covers/book5.jpg",
+    "status": true
+},
+{
+    "id": 89,
+    "title": "The Cute Psycho",
+    "author": "Veronica Lancet",
+    "price": 19.99,
+    "cover": "/book_covers/book6.jpg",
+    "status": true
+},
+{
+    "id": 90,
+    "title": "Your Knife, My Heart",
+    "author": "K.M. Moronova",
+    "price": 18.99,
+    "cover": "/book_covers/book7.jpg",
+    "status": true
+},
+{
+    "id": 91,
+    "title": "Violent Desire",
+    "author": "Ariana Nash",
+    "price": 10.99,
+    "cover": "/book_covers/book8.jpg",
+    "status": false
+},
+{
+    "id": 92,
+    "title": "Can Love Ever Be Just Like In The Movies",
+    "author": "Heidi Rice",
+    "price": 15.99,
+    "cover": "/book_covers/book9.jpg",
+    "status": true
+},
+{
+    "id": 93,
+    "title": "Dessert For Stressed People",
+    "author": "Letizia Lorini",
+    "price": 10.99,
+    "cover": "/book_covers/book10.jpg",
+    "status": false
+},
+{
+    "id": 94,
+    "title": "A Cuban Girl's Guide to Tea and Tomorrow",
+    "author": "Laura Taylor Namey",
+    "price": 8.99,
+    "cover": "/book_covers/book11.jpg",
+    "status": true
+},
+{
+    "id": 95,
+    "title": "I Was Born For This",
+    "author": "Alice Oseman",
+    "price": 12.99,
+    "cover": "/book_covers/book37.jpg",
+    "status": true
+},
+{
+    "id": 96,
+    "title": "Loveless",
+    "author": "Alice Oseman",
+    "price": 15.99,
+    "cover": "/book_covers/book38.jpg",
+    "status": true
+},
+{
+    "id": 97,
+    "title": "The Fae Queen's Captive",
+    "author": "Sierra Simone",
+    "price": 18.99,
+    "cover": "/book_covers/book41.jpg",
+    "status": true
+},
+{
+    "id": 98,
+    "title": "Love Contract",
+    "author": "Sophie Lark",
+    "price": 12.99,
+    "cover": "/book_covers/book40.jpg",
+    "status": true
+},
+{
+    "id": 99,
+    "title": "Starlet",
+    "author": "Sophie Lark",
+    "price": 15.99,
+    "cover": "/book_covers/book41.jpg",
+    "status": true
+},
+{
+    "id": 100,
+    "title": "Servant Of Earth",
+    "author": "Sarah Hawley",
+    "price": 19.99,
+    "cover": "/book_covers/book42.jpg",
+    "status": true
+},
+{
+    "id": 101,
+    "title": "Radio Silence",
+    "author": "Alice Oseman",
+    "price": 18.99,
+    "cover": "/book_covers/book43.jpg",
+    "status": true
+},
+{
+    "id": 102,
+    "title": "Honey Cut",
+    "author": "Sierra Simone",
+    "price": 15.99,
+    "cover": "/book_covers/book44.jpg",
+    "status": true
+}
 ]

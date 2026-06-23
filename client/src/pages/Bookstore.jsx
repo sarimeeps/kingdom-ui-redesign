@@ -10,34 +10,27 @@ import Pagination from '../components/Pagination.jsx';
 
 const Bookstore = () => {
 
-  //  {
-  //       "id": ,
-  //       "title": ,
-  //       "author": ,
-  //       "price": ,
-  //       "cover": ,
-  //       "status"
-  //   },
+
 
   const [books, setBooks] = useState([])
 
   useEffect(() => {
     fetch("/data/books.json")
-    .then(res => {
-      if(!res.ok){
-        throw new Error("Failed to load books")
-      }
-      return res.json();
-    })
-    .then(data => setBooks(data))
-    .catch(err => console.error(err))
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Failed to load books")
+        }
+        return res.json();
+      })
+      .then(data => setBooks(data))
+      .catch(err => console.error(err))
   }, [])
 
 
-  
+
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(12);
+  const [cardsPerPage, setCardsPerPage] = useState(15);
 
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
@@ -83,19 +76,21 @@ const Bookstore = () => {
             <p>Available in-store only</p>
           </div>
         </div>
-        <ul className='max-w-390 w-full grid grid-cols-4 gap-y-6 border'>
+        <ul className='max-w-390 w-full grid grid-cols-5 gap-y-6'>
           {currentCards.map((book, index) => (
             <li key={index} className='content-center mx-auto'>
               <BookItem cover={book.cover} title={book.title} author={book.author} price={book.price} />
             </li>
           ))}
         </ul>
-        <Pagination
-          totalCards={books.length}
-          cardsPerPage={cardsPerPage}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-        />
+        <div className='m-5'>
+          <Pagination
+            totalCards={books.length}
+            cardsPerPage={cardsPerPage}
+            setCurrentPage={setCurrentPage}
+            currentPage={currentPage}
+          />
+        </div>
       </section>
     </div>
   )

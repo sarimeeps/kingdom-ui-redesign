@@ -1,21 +1,82 @@
-const Pagination = ({ totalCards, cardsPerPage, setCurrentPage, currentPage }) => {
-    let pages = []
+import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
 
-    for (let i = 1; i <= Math.ceil(totalCards / cardsPerPage); i++) {
-        pages.push(i)
+const Pagination = ({ totalCards, cardsPerPage, setCurrentPage, currentPage }) => {
+
+    const totalPages = Math.ceil(totalCards / cardsPerPage);
+
+    // const pages = Array.from({length: totalPages}, (_, i) => i + 1)
+    
+    const getPages = (current, total) => {
+        if (total === 1){
+            return [1];
+        }
+
+        const pages = [];
+        const firstPage = 1;
+        const lastPage = total;
+        const prevPage = current - 1;
+        const nextPage = current + 1;
+
+        //adding first page
+        pages.push(firstPage)
+
+        //adding ellipses for the first half 
+        if(Math.abs(firstPage - prevPage) > 1){
+            pages.push('...');
+        }
+
+        //adding previous page
+        if(firstPage < prevPage){
+            pages.push(prevPage);
+        }
+
+        //adding current page
+        if(current !== firstPage && current !== lastPage){
+            pages.push(current);
+        }
+
+        //adding next page
+        if(nextPage < lastPage){
+            pages.push(nextPage);
+        }
+
+        //adding ellipses for the second half
+        if(Math.abs(nextPage - lastPage) > 1){
+            pages.push('...');
+        }
+
+        //adding last page
+        pages.push(lastPage);
+
+        return pages;
     }
 
+
     return (
-        <div className="border flex justify-center w-50 gap-2">
-            {pages.map((page, index) => {
-                return <button 
-                key={index} 
-                onClick={() => setCurrentPage(page)}
-                className={page == currentPage ? 'font-bold text-2xl -translate-y-1 text-[var(--text-h)]' : 'text-xl text-[var(--text)] cursor-pointer'}
+        <div className="flex justify-center w-50 gap-2">
+            <button 
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="mr-2"
+            >
+                <IoIosArrowDropleftCircle size={25} className={currentPage === 1 ? 'text-gray-400' : 'text-[var(--button)] cursor-pointer'}/>
+            </button>
+            {getPages(currentPage, totalPages).map((page, index) => {
+                return <button
+                    key={index}
+                    onClick={() => setCurrentPage(page)}
+                    className={page == currentPage ? 'font-bold text-2xl -translate-y-1 text-[var(--text-h)]' : 'text-xl text-[var(--text)] cursor-pointer'}
                 >
                     {page}
                 </button>
             })}
+            <button 
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="ml-2"
+            >
+                <IoIosArrowDroprightCircle size={25} className={currentPage === totalPages ? 'text-gray-400' : 'text-[var(--button)] cursor-pointer'}/>
+            </button>
         </div>
     )
 }
