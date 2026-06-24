@@ -1,7 +1,7 @@
 const BookItem = ({cover, title, author, price, status}) => {
 
     return (
-        <div className="max-w-60 h-full mb-2">
+        <div className="max-w-60 h-full mb-2 mx-2">
             <div className="mb-2">
                 <img src={ cover } alt={cover} className='w-full h-90 object-cover' />
             </div>
