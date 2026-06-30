@@ -5,7 +5,8 @@
         "author": "Racheal Lippioncott & Alyson Derrick",
         "price": 12.99,
         "cover": "/book_covers/book1.jpg",
-        "status": true
+        "genre": "lgbtq+",
+        "status": false
     },
     {
         "id": 2,
@@ -13,6 +14,7 @@
         "author": "Alice Oseman",
         "price": 14.99,
         "cover": "/book_covers/book2.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -21,6 +23,7 @@
         "author": "Jordan Greene",
         "price": 9.99,
         "cover": "/book_covers/book3.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -29,6 +32,7 @@
         "author": "Casey McQuiston",
         "price": 16.99,
         "cover": "/book_covers/book4.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -37,6 +41,7 @@
         "author": "H.D. Carlton",
         "price": 14.99,
         "cover": "/book_covers/book5.jpg",
+        "genre": "dark romance",
         "status": true
     },
     {
@@ -45,6 +50,7 @@
         "author": "Veronica Lancet",
         "price": 19.99,
         "cover": "/book_covers/book6.jpg",
+        "genre": "dark romance",
         "status": true
     },
     {
@@ -53,6 +59,7 @@
         "author": "K.M. Moronova",
         "price": 18.99,
         "cover": "/book_covers/book7.jpg",
+        "genre": "dark romance",
         "status": true
     },
     {
@@ -61,6 +68,7 @@
         "author": "Ariana Nash",
         "price": 10.99,
         "cover": "/book_covers/book8.jpg",
+        "genre": "dark romance",
         "status": false
     },
     {
@@ -69,6 +77,7 @@
         "author": "Heidi Rice",
         "price": 15.99,
         "cover": "/book_covers/book9.jpg",
+        "genre": "romantic comedy",
         "status": true
     },
     {
@@ -77,6 +86,7 @@
         "author": "Letizia Lorini",
         "price": 10.99,
         "cover": "/book_covers/book10.jpg",
+        "genre": "romantic comedy",
         "status": false
     },
     {
@@ -85,6 +95,7 @@
         "author": "Laura Taylor Namey",
         "price": 8.99,
         "cover": "/book_covers/book11.jpg",
+        "genre": "romantic comedy",
         "status": true
     },
     {
@@ -93,6 +104,7 @@
         "author": "Bal Khabra",
         "price": 19.99,
         "cover": "/book_covers/book12.jpg",
+        "genre": "romantic comedy",
         "status": true
     },
     {
@@ -101,6 +113,7 @@
         "author": "Sarra Manning",
         "price": 12.99,
         "cover": "/book_covers/book13.jpg",
+        "genre": "romantic comedy",
         "status": true
     },
     {
@@ -109,6 +122,7 @@
         "author": "Jackie Khalilieh",
         "price": 19.99,
         "cover": "/book_covers/book14.jpg",
+        "genre": "romantic comedy",
         "status": true
     },
     {
@@ -117,6 +131,7 @@
         "author": "Maeve Hazel",
         "price": 8.99,
         "cover": "/book_covers/book15.jpg",
+        "genre": "romantic comedy",
         "status": true
     },
     {
@@ -125,6 +140,7 @@
         "author": "Cynthia So",
         "price": 10.99,
         "cover": "/book_covers/book16.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -133,6 +149,7 @@
         "author": "Morgan Rogers",
         "price": 12.99,
         "cover": "/book_covers/book17.jpg",
+        "genre": "lgbtq+",
         "status": false
     },
     {
@@ -141,6 +158,7 @@
         "author": "Jordan Greene",
         "price": 19.99,
         "cover": "/book_covers/book18.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -149,6 +167,7 @@
         "author": "Hazel and Bell",
         "price": 18.99,
         "cover": "/book_covers/book19.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -157,6 +176,7 @@
         "author": "Becky Albertalli",
         "price": 12.99,
         "cover": "/book_covers/book20.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -165,6 +185,7 @@
         "author": "L.S. Belle",
         "price": 15.99,
         "cover": "/book_covers/book21.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -173,6 +194,7 @@
         "author": "Sheridan Anne",
         "price": 15.99,
         "cover": "/book_covers/book22.jpg",
+        "genre": "dark romance",
         "status": true
     },
     {
@@ -181,6 +203,7 @@
         "author": "K.F. Breene",
         "price": 18.99,
         "cover": "/book_covers/book23.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -189,6 +212,7 @@
         "author": "Kira Cole",
         "price": 12.99,
         "cover": "/book_covers/book24.jpg",
+        "genre": "dark romance",
         "status": false
     },
     {
@@ -197,6 +221,7 @@
         "author": "L.J. Andrews",
         "price": 15.99,
         "cover": "/book_covers/book25.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -205,6 +230,7 @@
         "author": "Atley Wykes",
         "price": 19.99,
         "cover": "/book_covers/book26.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -213,6 +239,7 @@
         "author": "Tiffany Hunt",
         "price": 18.99,
         "cover": "/book_covers/book27.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -221,6 +248,7 @@
         "author": "Rachel Griffin",
         "price": 14.99,
         "cover": "/book_covers/book28.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -229,6 +257,7 @@
         "author": "Alexandria Vasti",
         "price": 14.99,
         "cover": "/book_covers/book29.jpg",
+        "genre": "historical romance",
         "status": true
     },
     {
@@ -237,6 +266,7 @@
         "author": "Britt Belle",
         "price": 15.99,
         "cover": "/book_covers/book30.jpg",
+        "genre": "historical romance",
         "status": true
     },
     {
@@ -245,6 +275,7 @@
         "author": "Rosalyn Eves",
         "price": 18.99,
         "cover": "/book_covers/book31.jpg",
+        "genre": "historical romance",
         "status": true
     },
     {
@@ -253,6 +284,7 @@
         "author": "Sophie Irwin",
         "price": 12.99,
         "cover": "/book_covers/book32.jpg",
+        "genre": "historical romance",
         "status": true
     },
     {
@@ -261,6 +293,7 @@
         "author": "Stephanie Garber",
         "price": 15.99,
         "cover": "/book_covers/book33.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -269,6 +302,7 @@
         "author": "Stephanie Kerr",
         "price": 19.99,
         "cover": "/book_covers/book34.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -277,6 +311,7 @@
         "author": "Mariah Rae Birch",
         "price": 18.99,
         "cover": "/book_covers/book35.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -285,6 +320,7 @@
         "author": "Florence Gray",
         "price": 15.99,
         "cover": "/book_covers/book36.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -293,6 +329,7 @@
         "author": "Alice Oseman",
         "price": 12.99,
         "cover": "/book_covers/book37.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -301,6 +338,7 @@
         "author": "Alice Oseman",
         "price": 15.99,
         "cover": "/book_covers/book38.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -309,6 +347,7 @@
         "author": "Sierra Simone",
         "price": 18.99,
         "cover": "/book_covers/book41.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -317,6 +356,7 @@
         "author": "Sophie Lark",
         "price": 12.99,
         "cover": "/book_covers/book40.jpg",
+        "genre": "dark romance",
         "status": true
     },
     {
@@ -325,6 +365,7 @@
         "author": "Sophie Lark",
         "price": 15.99,
         "cover": "/book_covers/book41.jpg",
+        "genre": "dark romance",
         "status": true
     },
     {
@@ -333,6 +374,7 @@
         "author": "Sarah Hawley",
         "price": 19.99,
         "cover": "/book_covers/book42.jpg",
+        "genre": "fantasy romance",
         "status": true
     },
     {
@@ -341,6 +383,7 @@
         "author": "Alice Oseman",
         "price": 18.99,
         "cover": "/book_covers/book43.jpg",
+        "genre": "lgbtq+",
         "status": true
     },
     {
@@ -349,470 +392,529 @@
         "author": "Sierra Simone",
         "price": 15.99,
         "cover": "/book_covers/book44.jpg",
+        "genre": "dark romance",
         "status": true
     },
     {
-    "id": 45,
-    "title": "She Gets The Girl",
-    "author": "Racheal Lippioncott & Alyson Derrick",
-    "price": 12.99,
-    "cover": "/book_covers/book1.jpg",
-    "status": true
-},
-{
-    "id": 46,
-    "title": "Heartstopper",
-    "author": "Alice Oseman",
-    "price": 14.99,
-    "cover": "/book_covers/book2.jpg",
-    "status": true
-},
-{
-    "id": 47,
-    "title": "How Not to Conjure a Boyfriend",
-    "author": "Jordan Greene",
-    "price": 9.99,
-    "cover": "/book_covers/book3.jpg",
-    "status": true
-},
-{
-    "id": 48,
-    "title": "One Last Stop",
-    "author": "Casey McQuiston",
-    "price": 16.99,
-    "cover": "/book_covers/book4.jpg",
-    "status": true
-},
-{
-    "id": 49,
-    "title": "Haunting Adeline",
-    "author": "H.D. Carlton",
-    "price": 14.99,
-    "cover": "/book_covers/book5.jpg",
-    "status": true
-},
-{
-    "id": 50,
-    "title": "The Cute Psycho",
-    "author": "Veronica Lancet",
-    "price": 19.99,
-    "cover": "/book_covers/book6.jpg",
-    "status": true
-},
-{
-    "id": 51,
-    "title": "Your Knife, My Heart",
-    "author": "K.M. Moronova",
-    "price": 18.99,
-    "cover": "/book_covers/book7.jpg",
-    "status": true
-},
-{
-    "id": 52,
-    "title": "Violent Desire",
-    "author": "Ariana Nash",
-    "price": 10.99,
-    "cover": "/book_covers/book8.jpg",
-    "status": false
-},
-{
-    "id": 53,
-    "title": "Can Love Ever Be Just Like In The Movies",
-    "author": "Heidi Rice",
-    "price": 15.99,
-    "cover": "/book_covers/book9.jpg",
-    "status": true
-},
-{
-    "id": 54,
-    "title": "Dessert For Stressed People",
-    "author": "Letizia Lorini",
-    "price": 10.99,
-    "cover": "/book_covers/book10.jpg",
-    "status": false
-},
-{
-    "id": 55,
-    "title": "A Cuban Girl's Guide to Tea and Tomorrow",
-    "author": "Laura Taylor Namey",
-    "price": 8.99,
-    "cover": "/book_covers/book11.jpg",
-    "status": true
-},
-{
-    "id": 56,
-    "title": "She Gets The Girl",
-    "author": "Racheal Lippioncott & Alyson Derrick",
-    "price": 12.99,
-    "cover": "/book_covers/book1.jpg",
-    "status": true
-},
-{
-    "id": 57,
-    "title": "Heartstopper",
-    "author": "Alice Oseman",
-    "price": 14.99,
-    "cover": "/book_covers/book2.jpg",
-    "status": true
-},
-{
-    "id": 58,
-    "title": "How Not to Conjure a Boyfriend",
-    "author": "Jordan Greene",
-    "price": 9.99,
-    "cover": "/book_covers/book3.jpg",
-    "status": true
-},
-{
-    "id": 59,
-    "title": "One Last Stop",
-    "author": "Casey McQuiston",
-    "price": 16.99,
-    "cover": "/book_covers/book4.jpg",
-    "status": true
-},
-{
-    "id": 60,
-    "title": "Haunting Adeline",
-    "author": "H.D. Carlton",
-    "price": 14.99,
-    "cover": "/book_covers/book5.jpg",
-    "status": true
-},
-{
-    "id": 61,
-    "title": "The Cute Psycho",
-    "author": "Veronica Lancet",
-    "price": 19.99,
-    "cover": "/book_covers/book6.jpg",
-    "status": true
-},
-{
-    "id": 62,
-    "title": "Your Knife, My Heart",
-    "author": "K.M. Moronova",
-    "price": 18.99,
-    "cover": "/book_covers/book7.jpg",
-    "status": true
-},
-{
-    "id": 63,
-    "title": "Violent Desire",
-    "author": "Ariana Nash",
-    "price": 10.99,
-    "cover": "/book_covers/book8.jpg",
-    "status": false
-},
-{
-    "id": 64,
-    "title": "Can Love Ever Be Just Like In The Movies",
-    "author": "Heidi Rice",
-    "price": 15.99,
-    "cover": "/book_covers/book9.jpg",
-    "status": true
-},
-{
-    "id": 65,
-    "title": "She Gets The Girl",
-    "author": "Racheal Lippioncott & Alyson Derrick",
-    "price": 12.99,
-    "cover": "/book_covers/book1.jpg",
-    "status": true
-},
-{
-    "id": 66,
-    "title": "Heartstopper",
-    "author": "Alice Oseman",
-    "price": 14.99,
-    "cover": "/book_covers/book2.jpg",
-    "status": true
-},
-{
-    "id": 67,
-    "title": "How Not to Conjure a Boyfriend",
-    "author": "Jordan Greene",
-    "price": 9.99,
-    "cover": "/book_covers/book3.jpg",
-    "status": true
-},
-{
-    "id": 68,
-    "title": "One Last Stop",
-    "author": "Casey McQuiston",
-    "price": 16.99,
-    "cover": "/book_covers/book4.jpg",
-    "status": true
-},
-{
-    "id": 69,
-    "title": "Haunting Adeline",
-    "author": "H.D. Carlton",
-    "price": 14.99,
-    "cover": "/book_covers/book5.jpg",
-    "status": true
-},
-{
-    "id": 70,
-    "title": "The Cute Psycho",
-    "author": "Veronica Lancet",
-    "price": 19.99,
-    "cover": "/book_covers/book6.jpg",
-    "status": true
-},
-{
-    "id": 71,
-    "title": "Your Knife, My Heart",
-    "author": "K.M. Moronova",
-    "price": 18.99,
-    "cover": "/book_covers/book7.jpg",
-    "status": true
-},
-{
-    "id": 72,
-    "title": "Violent Desire",
-    "author": "Ariana Nash",
-    "price": 10.99,
-    "cover": "/book_covers/book8.jpg",
-    "status": false
-},
-{
-    "id": 73,
-    "title": "Can Love Ever Be Just Like In The Movies",
-    "author": "Heidi Rice",
-    "price": 15.99,
-    "cover": "/book_covers/book9.jpg",
-    "status": true
-},
-{
-    "id": 74,
-    "title": "Dessert For Stressed People",
-    "author": "Letizia Lorini",
-    "price": 10.99,
-    "cover": "/book_covers/book10.jpg",
-    "status": false
-},
-{
-    "id": 75,
-    "title": "A Cuban Girl's Guide to Tea and Tomorrow",
-    "author": "Laura Taylor Namey",
-    "price": 8.99,
-    "cover": "/book_covers/book11.jpg",
-    "status": true
-},
-{
-    "id": 76,
-    "title": "I Was Born For This",
-    "author": "Alice Oseman",
-    "price": 12.99,
-    "cover": "/book_covers/book37.jpg",
-    "status": true
-},
-{
-    "id": 77,
-    "title": "Loveless",
-    "author": "Alice Oseman",
-    "price": 15.99,
-    "cover": "/book_covers/book38.jpg",
-    "status": true
-},
-{
-    "id": 78,
-    "title": "The Fae Queen's Captive",
-    "author": "Sierra Simone",
-    "price": 18.99,
-    "cover": "/book_covers/book41.jpg",
-    "status": true
-},
-{
-    "id": 79,
-    "title": "Love Contract",
-    "author": "Sophie Lark",
-    "price": 12.99,
-    "cover": "/book_covers/book40.jpg",
-    "status": true
-},
-{
-    "id": 80,
-    "title": "Starlet",
-    "author": "Sophie Lark",
-    "price": 15.99,
-    "cover": "/book_covers/book41.jpg",
-    "status": true
-},
-{
-    "id": 81,
-    "title": "Servant Of Earth",
-    "author": "Sarah Hawley",
-    "price": 19.99,
-    "cover": "/book_covers/book42.jpg",
-    "status": true
-},
-{
-    "id": 82,
-    "title": "Radio Silence",
-    "author": "Alice Oseman",
-    "price": 18.99,
-    "cover": "/book_covers/book43.jpg",
-    "status": true
-},
-{
-    "id": 83,
-    "title": "Honey Cut",
-    "author": "Sierra Simone",
-    "price": 15.99,
-    "cover": "/book_covers/book44.jpg",
-    "status": true
-},
-{
-    "id": 84,
-    "title": "She Gets The Girl",
-    "author": "Racheal Lippioncott & Alyson Derrick",
-    "price": 12.99,
-    "cover": "/book_covers/book1.jpg",
-    "status": true
-},
-{
-    "id": 85,
-    "title": "Heartstopper",
-    "author": "Alice Oseman",
-    "price": 14.99,
-    "cover": "/book_covers/book2.jpg",
-    "status": true
-},
-{
-    "id": 86,
-    "title": "How Not to Conjure a Boyfriend",
-    "author": "Jordan Greene",
-    "price": 9.99,
-    "cover": "/book_covers/book3.jpg",
-    "status": true
-},
-{
-    "id": 87,
-    "title": "One Last Stop",
-    "author": "Casey McQuiston",
-    "price": 16.99,
-    "cover": "/book_covers/book4.jpg",
-    "status": true
-},
-{
-    "id": 88,
-    "title": "Haunting Adeline",
-    "author": "H.D. Carlton",
-    "price": 14.99,
-    "cover": "/book_covers/book5.jpg",
-    "status": true
-},
-{
-    "id": 89,
-    "title": "The Cute Psycho",
-    "author": "Veronica Lancet",
-    "price": 19.99,
-    "cover": "/book_covers/book6.jpg",
-    "status": true
-},
-{
-    "id": 90,
-    "title": "Your Knife, My Heart",
-    "author": "K.M. Moronova",
-    "price": 18.99,
-    "cover": "/book_covers/book7.jpg",
-    "status": true
-},
-{
-    "id": 91,
-    "title": "Violent Desire",
-    "author": "Ariana Nash",
-    "price": 10.99,
-    "cover": "/book_covers/book8.jpg",
-    "status": false
-},
-{
-    "id": 92,
-    "title": "Can Love Ever Be Just Like In The Movies",
-    "author": "Heidi Rice",
-    "price": 15.99,
-    "cover": "/book_covers/book9.jpg",
-    "status": true
-},
-{
-    "id": 93,
-    "title": "Dessert For Stressed People",
-    "author": "Letizia Lorini",
-    "price": 10.99,
-    "cover": "/book_covers/book10.jpg",
-    "status": false
-},
-{
-    "id": 94,
-    "title": "A Cuban Girl's Guide to Tea and Tomorrow",
-    "author": "Laura Taylor Namey",
-    "price": 8.99,
-    "cover": "/book_covers/book11.jpg",
-    "status": true
-},
-{
-    "id": 95,
-    "title": "I Was Born For This",
-    "author": "Alice Oseman",
-    "price": 12.99,
-    "cover": "/book_covers/book37.jpg",
-    "status": true
-},
-{
-    "id": 96,
-    "title": "Loveless",
-    "author": "Alice Oseman",
-    "price": 15.99,
-    "cover": "/book_covers/book38.jpg",
-    "status": true
-},
-{
-    "id": 97,
-    "title": "The Fae Queen's Captive",
-    "author": "Sierra Simone",
-    "price": 18.99,
-    "cover": "/book_covers/book41.jpg",
-    "status": true
-},
-{
-    "id": 98,
-    "title": "Love Contract",
-    "author": "Sophie Lark",
-    "price": 12.99,
-    "cover": "/book_covers/book40.jpg",
-    "status": true
-},
-{
-    "id": 99,
-    "title": "Starlet",
-    "author": "Sophie Lark",
-    "price": 15.99,
-    "cover": "/book_covers/book41.jpg",
-    "status": true
-},
-{
-    "id": 100,
-    "title": "Servant Of Earth",
-    "author": "Sarah Hawley",
-    "price": 19.99,
-    "cover": "/book_covers/book42.jpg",
-    "status": true
-},
-{
-    "id": 101,
-    "title": "Radio Silence",
-    "author": "Alice Oseman",
-    "price": 18.99,
-    "cover": "/book_covers/book43.jpg",
-    "status": true
-},
-{
-    "id": 102,
-    "title": "Honey Cut",
-    "author": "Sierra Simone",
-    "price": 15.99,
-    "cover": "/book_covers/book44.jpg",
-    "status": true
-}
+        "id": 45,
+        "title": "She Gets The Girl",
+        "author": "Racheal Lippioncott & Alyson Derrick",
+        "price": 12.99,
+        "cover": "/book_covers/book1.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 46,
+        "title": "Heartstopper",
+        "author": "Alice Oseman",
+        "price": 14.99,
+        "cover": "/book_covers/book2.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 47,
+        "title": "How Not to Conjure a Boyfriend",
+        "author": "Jordan Greene",
+        "price": 9.99,
+        "cover": "/book_covers/book3.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 48,
+        "title": "One Last Stop",
+        "author": "Casey McQuiston",
+        "price": 16.99,
+        "cover": "/book_covers/book4.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 49,
+        "title": "Haunting Adeline",
+        "author": "H.D. Carlton",
+        "price": 14.99,
+        "cover": "/book_covers/book5.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 50,
+        "title": "The Cute Psycho",
+        "author": "Veronica Lancet",
+        "price": 19.99,
+        "cover": "/book_covers/book6.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 51,
+        "title": "Your Knife, My Heart",
+        "author": "K.M. Moronova",
+        "price": 18.99,
+        "cover": "/book_covers/book7.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 52,
+        "title": "Violent Desire",
+        "author": "Ariana Nash",
+        "price": 10.99,
+        "cover": "/book_covers/book8.jpg",
+        "genre": "dark romance",
+        "status": false
+    },
+    {
+        "id": 53,
+        "title": "Can Love Ever Be Just Like In The Movies",
+        "author": "Heidi Rice",
+        "price": 15.99,
+        "cover": "/book_covers/book9.jpg",
+        "genre": "romantic comedy",
+        "status": true
+    },
+    {
+        "id": 54,
+        "title": "Dessert For Stressed People",
+        "author": "Letizia Lorini",
+        "price": 10.99,
+        "cover": "/book_covers/book10.jpg",
+        "genre": "romantic comedy",
+        "status": false
+    },
+    {
+        "id": 55,
+        "title": "A Cuban Girl's Guide to Tea and Tomorrow",
+        "author": "Laura Taylor Namey",
+        "price": 8.99,
+        "cover": "/book_covers/book11.jpg",
+        "genre": "romantic comedy",
+        "status": true
+    },
+    {
+        "id": 56,
+        "title": "She Gets The Girl",
+        "author": "Racheal Lippioncott & Alyson Derrick",
+        "price": 12.99,
+        "cover": "/book_covers/book1.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 57,
+        "title": "Heartstopper",
+        "author": "Alice Oseman",
+        "price": 14.99,
+        "cover": "/book_covers/book2.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 58,
+        "title": "How Not to Conjure a Boyfriend",
+        "author": "Jordan Greene",
+        "price": 9.99,
+        "cover": "/book_covers/book3.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 59,
+        "title": "One Last Stop",
+        "author": "Casey McQuiston",
+        "price": 16.99,
+        "cover": "/book_covers/book4.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 60,
+        "title": "Haunting Adeline",
+        "author": "H.D. Carlton",
+        "price": 14.99,
+        "cover": "/book_covers/book5.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 61,
+        "title": "The Cute Psycho",
+        "author": "Veronica Lancet",
+        "price": 19.99,
+        "cover": "/book_covers/book6.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 62,
+        "title": "Your Knife, My Heart",
+        "author": "K.M. Moronova",
+        "price": 18.99,
+        "cover": "/book_covers/book7.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 63,
+        "title": "Violent Desire",
+        "author": "Ariana Nash",
+        "price": 10.99,
+        "cover": "/book_covers/book8.jpg",
+        "genre": "dark romance",
+        "status": false
+    },
+    {
+        "id": 64,
+        "title": "Can Love Ever Be Just Like In The Movies",
+        "author": "Heidi Rice",
+        "price": 15.99,
+        "cover": "/book_covers/book9.jpg",
+        "genre": "romantic comedy",
+        "status": true
+    },
+    {
+        "id": 65,
+        "title": "She Gets The Girl",
+        "author": "Racheal Lippioncott & Alyson Derrick",
+        "price": 12.99,
+        "cover": "/book_covers/book1.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 66,
+        "title": "Heartstopper",
+        "author": "Alice Oseman",
+        "price": 14.99,
+        "cover": "/book_covers/book2.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 67,
+        "title": "How Not to Conjure a Boyfriend",
+        "author": "Jordan Greene",
+        "price": 9.99,
+        "cover": "/book_covers/book3.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 68,
+        "title": "One Last Stop",
+        "author": "Casey McQuiston",
+        "price": 16.99,
+        "cover": "/book_covers/book4.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 69,
+        "title": "Haunting Adeline",
+        "author": "H.D. Carlton",
+        "price": 14.99,
+        "cover": "/book_covers/book5.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 70,
+        "title": "The Cute Psycho",
+        "author": "Veronica Lancet",
+        "price": 19.99,
+        "cover": "/book_covers/book6.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 71,
+        "title": "Your Knife, My Heart",
+        "author": "K.M. Moronova",
+        "price": 18.99,
+        "cover": "/book_covers/book7.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 72,
+        "title": "Violent Desire",
+        "author": "Ariana Nash",
+        "price": 10.99,
+        "cover": "/book_covers/book8.jpg",
+        "genre": "dark romance",
+        "status": false
+    },
+    {
+        "id": 73,
+        "title": "Can Love Ever Be Just Like In The Movies",
+        "author": "Heidi Rice",
+        "price": 15.99,
+        "cover": "/book_covers/book9.jpg",
+        "genre": "romantic comedy",
+        "status": true
+    },
+    {
+        "id": 74,
+        "title": "Dessert For Stressed People",
+        "author": "Letizia Lorini",
+        "price": 10.99,
+        "cover": "/book_covers/book10.jpg",
+        "genre": "romantic comedy",
+        "status": false
+    },
+    {
+        "id": 75,
+        "title": "A Cuban Girl's Guide to Tea and Tomorrow",
+        "author": "Laura Taylor Namey",
+        "price": 8.99,
+        "cover": "/book_covers/book11.jpg",
+        "genre": "romantic comedy",
+        "status": true
+    },
+    {
+        "id": 76,
+        "title": "I Was Born For This",
+        "author": "Alice Oseman",
+        "price": 12.99,
+        "cover": "/book_covers/book37.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 77,
+        "title": "Loveless",
+        "author": "Alice Oseman",
+        "price": 15.99,
+        "cover": "/book_covers/book38.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 78,
+        "title": "The Fae Queen's Captive",
+        "author": "Sierra Simone",
+        "price": 18.99,
+        "cover": "/book_covers/book41.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 79,
+        "title": "Love Contract",
+        "author": "Sophie Lark",
+        "price": 12.99,
+        "cover": "/book_covers/book40.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 80,
+        "title": "Starlet",
+        "author": "Sophie Lark",
+        "price": 15.99,
+        "cover": "/book_covers/book41.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 81,
+        "title": "Servant Of Earth",
+        "author": "Sarah Hawley",
+        "price": 19.99,
+        "cover": "/book_covers/book42.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 82,
+        "title": "Radio Silence",
+        "author": "Alice Oseman",
+        "price": 18.99,
+        "cover": "/book_covers/book43.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 83,
+        "title": "Honey Cut",
+        "author": "Sierra Simone",
+        "price": 15.99,
+        "cover": "/book_covers/book44.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 84,
+        "title": "She Gets The Girl",
+        "author": "Racheal Lippioncott & Alyson Derrick",
+        "price": 12.99,
+        "cover": "/book_covers/book1.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 85,
+        "title": "Heartstopper",
+        "author": "Alice Oseman",
+        "price": 14.99,
+        "cover": "/book_covers/book2.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 86,
+        "title": "How Not to Conjure a Boyfriend",
+        "author": "Jordan Greene",
+        "price": 9.99,
+        "cover": "/book_covers/book3.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 87,
+        "title": "One Last Stop",
+        "author": "Casey McQuiston",
+        "price": 16.99,
+        "cover": "/book_covers/book4.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 88,
+        "title": "Haunting Adeline",
+        "author": "H.D. Carlton",
+        "price": 14.99,
+        "cover": "/book_covers/book5.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 89,
+        "title": "The Cute Psycho",
+        "author": "Veronica Lancet",
+        "price": 19.99,
+        "cover": "/book_covers/book6.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 90,
+        "title": "Your Knife, My Heart",
+        "author": "K.M. Moronova",
+        "price": 18.99,
+        "cover": "/book_covers/book7.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 91,
+        "title": "Violent Desire",
+        "author": "Ariana Nash",
+        "price": 10.99,
+        "cover": "/book_covers/book8.jpg",
+        "genre": "dark romance",
+        "status": false
+    },
+    {
+        "id": 92,
+        "title": "Can Love Ever Be Just Like In The Movies",
+        "author": "Heidi Rice",
+        "price": 15.99,
+        "cover": "/book_covers/book9.jpg",
+        "genre": "romantic comedy",
+        "status": true
+    },
+    {
+        "id": 93,
+        "title": "Dessert For Stressed People",
+        "author": "Letizia Lorini",
+        "price": 10.99,
+        "cover": "/book_covers/book10.jpg",
+        "genre": "romantic comedy",
+        "status": false
+    },
+    {
+        "id": 94,
+        "title": "A Cuban Girl's Guide to Tea and Tomorrow",
+        "author": "Laura Taylor Namey",
+        "price": 8.99,
+        "cover": "/book_covers/book11.jpg",
+        "genre": "romantic comedy",
+        "status": true
+    },
+    {
+        "id": 95,
+        "title": "I Was Born For This",
+        "author": "Alice Oseman",
+        "price": 12.99,
+        "cover": "/book_covers/book37.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 96,
+        "title": "Loveless",
+        "author": "Alice Oseman",
+        "price": 15.99,
+        "cover": "/book_covers/book38.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 97,
+        "title": "The Fae Queen's Captive",
+        "author": "Sierra Simone",
+        "price": 18.99,
+        "cover": "/book_covers/book41.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 98,
+        "title": "Love Contract",
+        "author": "Sophie Lark",
+        "price": 12.99,
+        "cover": "/book_covers/book40.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 99,
+        "title": "Starlet",
+        "author": "Sophie Lark",
+        "price": 15.99,
+        "cover": "/book_covers/book41.jpg",
+        "genre": "dark romance",
+        "status": true
+    },
+    {
+        "id": 100,
+        "title": "Servant Of Earth",
+        "author": "Sarah Hawley",
+        "price": 19.99,
+        "cover": "/book_covers/book42.jpg",
+        "genre": "fantasy romance",
+        "status": true
+    },
+    {
+        "id": 101,
+        "title": "Radio Silence",
+        "author": "Alice Oseman",
+        "price": 18.99,
+        "cover": "/book_covers/book43.jpg",
+        "genre": "lgbtq+",
+        "status": true
+    },
+    {
+        "id": 102,
+        "title": "Honey Cut",
+        "author": "Sierra Simone",
+        "price": 15.99,
+        "cover": "/book_covers/book44.jpg",
+        "genre": "dark romance",
+        "status": true
+    }
 ]

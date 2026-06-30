@@ -5,15 +5,14 @@ import { PiArrowCircleRight } from "react-icons/pi";
 import bookclub from '../assets/book_shop/bookclub.jpg';
 import BookItem from '../components/BookItem.jsx';
 import Pagination from '../components/Pagination.jsx';
-
+import Filter from '../components/Filter.jsx';
 
 
 const Bookstore = () => {
 
-
-
   const [books, setBooks] = useState([])
 
+  //loading bookstore inventory
   useEffect(() => {
     fetch("/data/books.json")
       .then(res => {
@@ -22,21 +21,40 @@ const Bookstore = () => {
         }
         return res.json();
       })
-      .then(data => setBooks(data))
+      .then(data => {
+        setBooks(data)
+      })
       .catch(err => console.error(err))
   }, [])
 
 
+  const [currentGenre, setCurrentGenre] = useState('')
+  const [currentAuthor, setCurrentAuthor] = useState('')
 
+  const filteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre : true).filter(book => currentAuthor ? book.author === currentAuthor : true)
+  const genreFilteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre: true)
 
+  //retrieving genres and authors to display in filter component
+  const genres = [...new Set(books.map(book => book.genre))]
+  const authors = [...new Set(genreFilteredBooks.map(book => book.author))]
+
+  //book grid pagination set up 
   const [currentPage, setCurrentPage] = useState(1);
-  const [cardsPerPage, setCardsPerPage] = useState(15);
+  const cardsPerPage = 15;
 
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
 
-  const currentCards = books.slice(firstCardIndex, lastCardIndex);
+  const currentCards = filteredBooks.slice(firstCardIndex, lastCardIndex);
 
+  useEffect(() => {
+    setCurrentPage(1)
+    setCurrentAuthor('')
+  }, [currentGenre])
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [currentAuthor])
 
   return (
     <div className='flex flex-col items-center mt-15'>
@@ -59,16 +77,24 @@ const Bookstore = () => {
         </div>
       </section>
       <section className='bg-[var(--bg)] w-full flex flex-col items-center'>
-        <h1 className='border mt-16 pb-6'>Our Books</h1>
-        <div className='flex flex-row justify-center border max-w-200 w-full'>
-          <div className='w-full text-center'>
-            <p className='p-5'>Author Filter</p>
+        <h1 className='mt-16 pb-6'>Our Books</h1>
+        <div className='flex flex-row justify-center max-w-200 w-full mt-2'>
+          <div className='w-full justify-items-center'>
+            <Filter
+              category='Author'
+              choice={currentAuthor}
+              setChoice={setCurrentAuthor}
+              selections={authors} />
           </div>
-          <div className='w-full text-center'>
-            <p className='p-5'>Genre Filter</p>
+          <div className='w-full justify-items-center'>
+            <Filter
+              category='Genre'
+              choice={currentGenre}
+              setChoice={setCurrentGenre}
+              selections={genres} />
           </div>
         </div>
-        <div className='flex flex-row border max-w-380 w-full p-6'>
+        <div className='flex flex-row max-w-380 w-full p-6'>
           <div className='w-full text-start'>
             <p>In Stock</p>
           </div>
@@ -77,15 +103,21 @@ const Bookstore = () => {
           </div>
         </div>
         <ul className='max-w-390 w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-6'>
-          {currentCards.map((book, index) => (
-            <li key={index} className='content-center mx-auto'>
-              <BookItem cover={book.cover} title={book.title} author={book.author} price={book.price} />
-            </li>
-          ))}
+          {
+            currentCards.map((book, index) => (
+              <li key={book.id} className='content-center mx-auto'>
+                <BookItem
+                  cover={book.cover}
+                  title={book.title}
+                  author={book.author}
+                  price={book.price}
+                  status={book.status} />
+              </li>
+            ))}
         </ul>
         <div className='m-5'>
           <Pagination
-            totalCards={books.length}
+            totalCards={filteredBooks.length}
             cardsPerPage={cardsPerPage}
             setCurrentPage={setCurrentPage}
             currentPage={currentPage}

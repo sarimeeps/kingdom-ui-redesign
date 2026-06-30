@@ -4,7 +4,6 @@ const Pagination = ({ totalCards, cardsPerPage, setCurrentPage, currentPage }) =
 
     const totalPages = Math.ceil(totalCards / cardsPerPage);
 
-    // const pages = Array.from({length: totalPages}, (_, i) => i + 1)
 
     const getPages = (current, total) => {
         if (total === 1) {
