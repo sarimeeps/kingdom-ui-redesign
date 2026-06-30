@@ -8,7 +8,9 @@ const BookItem = ({cover, title, author, price, status}) => {
             <div className="">
                 <p className='font-bold text-2xl text-gray-700 truncate w-60'>{ title }</p>
                 <p className='text-lg text-gray-500 truncate w-60'>{ author }</p>
-                <p className='font-semibold text-xl text-gray-500'>${ price }</p>
+                {
+                    status === true ? <p className='font-semibold text-xl text-gray-500'>${ price }</p> : <p className="font-semibold text-xl text-red-500">Out Of Stock</p>
+                }
             </div>
         </div>
     )
