@@ -5,7 +5,7 @@ import { Menu } from 'lucide-react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router'
 
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Navbar() {
 
