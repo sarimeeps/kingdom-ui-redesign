@@ -30,13 +30,31 @@ const Bookstore = () => {
 
   const [currentGenre, setCurrentGenre] = useState('')
   const [currentAuthor, setCurrentAuthor] = useState('')
+  const [currentStatus, setCurrentStatus] = useState('')
 
-  const filteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre : true).filter(book => currentAuthor ? book.author === currentAuthor : true)
-  const genreFilteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre: true)
+  const filteredBooks = books
+                        .filter(book => currentGenre ? book.genre === currentGenre : true)
+                        .filter(book => currentAuthor ? book.author === currentAuthor : true)
+                        .filter(book => !currentStatus || book.status === (currentStatus === 'In Stock'))
+  const genreFilteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre : true)
 
-  //retrieving genres and authors to display in filter component
+  //TODO: Improve filter logic so each filter option is based on other active filters
+
+  //retrieving genres, authors, and book status to display in filter components
   const genres = [...new Set(books.map(book => book.genre))]
   const authors = [...new Set(genreFilteredBooks.map(book => book.author))]
+  const status = ['In Stock', 'Out of Stock']
+
+
+
+  useEffect(() => {
+    setCurrentPage(1)
+    setCurrentAuthor('')
+  }, [currentGenre])
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [currentAuthor, currentStatus])
 
   //book grid pagination set up 
   const [currentPage, setCurrentPage] = useState(1);
@@ -47,18 +65,9 @@ const Bookstore = () => {
 
   const currentCards = filteredBooks.slice(firstCardIndex, lastCardIndex);
 
-  useEffect(() => {
-    setCurrentPage(1)
-    setCurrentAuthor('')
-  }, [currentGenre])
-
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [currentAuthor])
-
   return (
-    <div className='flex flex-col items-center mt-15'>
-      <section className='flex flex-row justify-center w-full max-w-[1920px] space-x-18 mb-30 px-4'>
+    <div className='flex flex-col items-center mt-10 mb-3'>
+      <section className='flex flex-row justify-center w-full max-w-[1920px] space-x-18 my-15 px-4'>
         <div className='justify-items-center'>
           <div className='max-w-3xl h-full content-center'>
             <h1 className='my-6 text-center lg:text-start'>Join Our Book Club</h1>
@@ -76,30 +85,42 @@ const Bookstore = () => {
           </div>
         </div>
       </section>
-      <section className='bg-[var(--bg)] w-full flex flex-col items-center'>
-        <h1 className='mt-16 pb-6'>Our Books</h1>
-        <div className='flex flex-row justify-center max-w-200 w-full mt-2'>
-          <div className='w-full justify-items-center'>
-            <Filter
-              category='Author'
-              choice={currentAuthor}
-              setChoice={setCurrentAuthor}
-              selections={authors} />
+      <section className='max-w-[1920px] mt-19 bg-[var(--bg)] w-full flex flex-col items-center'>
+        <h1 className='mt-16'>Our Books</h1>
+        <div className='flex flex-row max-w-390 w-full mt-9 mb-12 px-3'>
+          <div className='w-full flex flex-col'>
+            <div className='mb-3'>
+              <p className='text-gray-600'>FILTER BY</p>
+            </div>
+            <div className='w-full flex flex-row space-x-6'>
+              <Filter
+                category='Availability'
+                choice={currentStatus}
+                setChoice={setCurrentStatus}
+                selections={status} />
+                <Filter
+                category='Genre'
+                choice={currentGenre}
+                setChoice={setCurrentGenre}
+                selections={genres} />
+              <Filter
+                category='Author'
+                choice={currentAuthor}
+                setChoice={setCurrentAuthor}
+                selections={authors} />
+            </div>
           </div>
-          <div className='w-full justify-items-center'>
-            <Filter
-              category='Genre'
-              choice={currentGenre}
-              setChoice={setCurrentGenre}
-              selections={genres} />
-          </div>
-        </div>
-        <div className='flex flex-row max-w-380 w-full p-6'>
-          <div className='w-full text-start'>
-            <p>In Stock</p>
-          </div>
-          <div className='w-full text-end'>
-            <p>Available in-store only</p>
+          <div className='w-full flex flex-col'>
+            <div className='mb-3 flex self-end max-w-60 w-full'>
+              <p className='text-gray-600'>SORT BY</p>
+            </div>
+            <div className='w-full flex justify-end'>
+              <Filter
+                category='Price'
+                choice={currentGenre}
+                setChoice={setCurrentGenre}
+                selections={genres} />
+            </div>
           </div>
         </div>
         <ul className='max-w-390 w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-6'>
