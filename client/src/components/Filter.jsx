@@ -11,8 +11,8 @@ const Filter = ({ category, choice, setChoice, selections = [] }) => {
     }
 
     return (
-        <div className="relative flex flex-col max-w-65 w-full">
-            <div onClick={() => setIsOpen(!isOpen)} className="flex flex-row items-center cursor-pointer border-b-2 border-gray-500 p-1">
+        <div className="relative flex flex-col max-w-60 w-full">
+            <div onClick={() => setIsOpen(!isOpen)} className="flex flex-row items-center cursor-pointer border border-gray-300 p-1 bg-[#fff]">
                 <p
                     className="text-xl text-gray-500 flex-1 capitalize">
                     {choice}</p>
