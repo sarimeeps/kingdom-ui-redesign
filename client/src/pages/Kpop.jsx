@@ -54,19 +54,6 @@ const Kpop = () => {
 
   const currentCards = filteredKpop.slice(firstCardIndex, lastCardIndex);
 
-  // const filters = [
-  //   {
-  //     key: 'artist',
-  //     label: 'Artist',
-  //     options: ['All Artists','ATEEZ', 'BTS', 'CORTIS', 'LE SSERAFIM', 'SEVENTEEN', 'STRAY KIDS', 'TOMORROW X TOGETHER']
-  //   },
-  //   {
-  //     key: 'sort',
-  //     label: 'Sort',
-  //     options: ['Newest', 'Oldest', 'Price: Low to High', 'Price: High to Low']
-  //   }
-  // ]
-
   return (
     <div className='relative mx-auto w-full px-2 py-6'>
 
