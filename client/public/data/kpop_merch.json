@@ -1,0 +1,363 @@
+[
+    {
+        "id": 1,
+        "title": "GOLDEN HOUR: Part.4 (DIGIPACK VER.)",
+        "group": "ATEEZ",
+        "price": 17.99,
+        "image": "/album_covers/album1.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 2,
+        "title": "GOLDEN HOUR: Part.4 (Z VER.)",
+        "group": "ATEEZ",
+        "price": 29.99,
+        "image": "/album_covers/album2.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 3,
+        "title": "GOLDEN HOUR: Part.4 (SET)",
+        "group": "ATEEZ",
+        "price": 48.99,
+        "image": "/album_covers/album3.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 4,
+        "title": "ECHO",
+        "group": "JIN (BTS)",
+        "price": 24.99,
+        "image": "/album_covers/album4.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 5,
+        "title": "ARIRANG (Living Legend Ver.)",
+        "group": "BTS",
+        "price": 29.99,
+        "image": "/album_covers/album5.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 6,
+        "title": "PERMISSION TO DANCE ON STAGE",
+        "group": "BTS",
+        "price": 24.99,
+        "image": "/album_covers/album6.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 7,
+        "title": "CHARM OF HOPE (SET)",
+        "group": "j-hope (BTS)",
+        "price": 59.99,
+        "image": "/album_covers/album7.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 8,
+        "title": "CHARM OF HOPE (KILLIN' IT GIRL ver.)",
+        "group": "j-hope (BTS)",
+        "price": 35.99,
+        "image": "/album_covers/album8.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 9,
+        "title": "HYYH PT. 2",
+        "group": "BTS",
+        "price": 35.99,
+        "image": "/album_covers/album9.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 10,
+        "title": "2 COOL 4 SKOOL",
+        "group": "BTS",
+        "price": 17.99,
+        "image": "/album_covers/album10.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 11,
+        "title": "COLOR OUTSIDE THE LINES",
+        "group": "CORTIS",
+        "price": 29.99,
+        "image": "/album_covers/album11.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 12,
+        "title": "SPAGHETTI COMPACT ver.",
+        "group": "LE SSERAFIM",
+        "price": 17.50,
+        "image": "/album_covers/album12.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 13,
+        "title": "SPAGHETTI STRESS BALL ver.",
+        "group": "LE SSERAFIM",
+        "price": 37.90,
+        "image": "/album_covers/album13.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 14,
+        "title": "SKZ IT TAPE 'DO IT' (Accordian Ver.)",
+        "group": "STRAY KIDS",
+        "price": 20.00,
+        "image": "/album_covers/album14.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 15,
+        "title": "SKZ IT TAPE - 'DO IT'",
+        "group": "STRAY KIDS",
+        "price": 24.99,
+        "image": "/album_covers/album15.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 16,
+        "title": "HOP (HIPHOP VER.)",
+        "group": "STRAY KIDS",
+        "price": 29.99,
+        "image": "/album_covers/album16.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 17,
+        "title": "BEAM",
+        "group": "HOSHI X WOOZI (SEVENTEEN)",
+        "price": 15.59,
+        "image": "/album_covers/album17.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 18,
+        "title": "1st Mini Album SERENADE - Standard",
+        "group": "DK X SEUNGKWAN (SEVENTEEN)",
+        "price": 29.99,
+        "image": "/album_covers/album18.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 19,
+        "title": "17 IS RIGHT THERE",
+        "group": "SEVENTEEN",
+        "price": 49.90,
+        "image": "/album_covers/album19.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 20,
+        "title": "HYPE VIBES",
+        "group": "CxM (SEVENTEEN)",
+        "price": 23.90,
+        "image": "/album_covers/album20.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 21,
+        "title": "NO LABELS: PART 01",
+        "group": "TOMORROW X TOGETHER",
+        "price": 46.90,
+        "image": "/album_covers/album21.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 22,
+        "title": "BEOMGYU's Mixtape: Panic",
+        "group": "TOMORROW X TOGETHER",
+        "price": 33.90,
+        "image": "/album_covers/album22.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 23,
+        "title": "Love Language",
+        "group": "TOMORROW X TOGETHER",
+        "price": 35.00,
+        "image": "/album_covers/album23.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 24,
+        "title": "Starkissed",
+        "group": "TOMORROW X TOGETHER",
+        "price": 29.99,
+        "image": "/album_covers/album24.jpeg",
+        "type": "album",
+        "status": false
+    },
+    {
+        "id": 25,
+        "title": "The Star Chapter: TOGETHER",
+        "group": "TOMORROW X TOGETHER",
+        "price": 29.99,
+        "image": "/album_covers/album25.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 26,
+        "title": "7TH YEAR: ...",
+        "group": "TOMORROW X TOGETHER",
+        "price": 29.99,
+        "image": "/album_covers/album26.jpeg",
+        "type": "album",
+        "status": true
+    },
+    {
+        "id": 27,
+        "title": "OFFICIAL LIGHT STICK VER. 2",
+        "group": "ATEEZ",
+        "price": 69.99,
+        "image": "/lightsticks/lightstick1.jpeg",
+        "type": "lightstick",
+        "status": true
+    },
+    {
+        "id": 28,
+        "title": "BTS OFFICIAL LIGHTSTICK VER. 4",
+        "group": "BTS",
+        "price": 64.00,
+        "image": "/lightsticks/lightstick2.jpeg",
+        "type": "lightstick",
+        "status": false
+    },
+    {
+        "id": 29,
+        "title": "OFFICIAL LIGHT STICK",
+        "group": "LE SSERAFIM",
+        "price": 64.00,
+        "image": "/lightsticks/lightstick3.jpeg",
+        "type": "lightstick",
+        "status": true
+    },
+    {
+        "id": 30,
+        "title": "OFFICIAL LIGHT STICK VER. 2",
+        "group": "STRAY KIDS",
+        "price": 59.99,
+        "image": "/lightsticks/lightstick4.jpeg",
+        "type": "lightstick",
+        "status": true
+    },
+    {
+        "id": 31,
+        "title": "OFFICIAL LIGHTSTICK VER. 3",
+        "group": "SEVENTEEN",
+        "price": 64.00,
+        "image": "/lightsticks/lightstick5.jpeg",
+        "type": "lightstick",
+        "status": false
+    },
+    {
+        "id": 32,
+        "title": "OFFICIAL LIGHT STICK VER. 2",
+        "group": "TOMORROW X TOGETHER",
+        "price": 64.00,
+        "image": "/lightsticks/lightstick6.jpeg",
+        "type": "lightstick",
+        "status": true
+    },
+    {
+        "id": 33,
+        "title": "V ‘TYPE 非’ PHOTOBOOK",
+        "group": "BTS",
+        "price": 65.00,
+        "image": "/misc_merch/misc1.jpeg",
+        "type": "misc",
+        "status": false
+    },
+    {
+        "id": 34,
+        "title": "BTS 7 MOMENTS",
+        "group": "BTS",
+        "price": 53.00,
+        "image": "/misc_merch/misc2.jpeg",
+        "type": "misc",
+        "status": false
+    },
+    {
+        "id": 35,
+        "title": "FIM'S CLUB Hooded Scarf",
+        "group": "LE SSERAFIM",
+        "price": 65.00,
+        "image": "/misc_merch/misc3.jpeg",
+        "type": "misc",
+        "status": false
+    },
+    {
+        "id": 36,
+        "title": "Crossbody Bag",
+        "group": "LE SSERAFIM",
+        "price": 65.00,
+        "image": "/misc_merch/misc4.jpeg",
+        "type": "misc",
+        "status": true
+    },
+    {
+        "id": 37,
+        "title": "HAPPY DK DAY [GLASSES]",
+        "group": "SEVENTEEN",
+        "price": 65.00,
+        "image": "/misc_merch/misc5.jpeg",
+        "type": "misc",
+        "status": false
+    },
+    {
+        "id": 38,
+        "title": "<ACT: PROMISE> ENCORE IN SEOUL",
+        "group": "TOMORROW X TOGETHER",
+        "price": 65.00,
+        "image": "/misc_merch/misc6.jpeg",
+        "type": "misc",
+        "status": true
+    },
+    {
+        "id": 39,
+        "title": "SNOW PPULBATU",
+        "group": "TOMORROW X TOGETHER",
+        "price": 25.00,
+        "image": "/misc_merch/misc7.jpeg",
+        "type": "misc",
+        "status": true
+    },
+    {
+        "id": 40,
+        "title": "BAMGEUT Plush Set",
+        "group": "TOMORROW X TOGETHER",
+        "price": 55.00,
+        "image": "/misc_merch/misc8.jpeg",
+        "type": "misc",
+        "status": true
+    }
+
+]    

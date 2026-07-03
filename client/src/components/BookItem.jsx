@@ -6,10 +6,10 @@ const BookItem = ({cover, title, author, price, status}) => {
                 <img src={ cover } alt={cover} className='w-full h-90 object-cover' />
             </div>
             <div className="">
-                <p className='font-bold text-2xl text-gray-700 truncate w-60'>{ title }</p>
-                <p className='text-lg text-gray-500 truncate w-60'>{ author }</p>
+                <p className='font-semibold text-[var(--text)] text-[1.375rem] truncate w-60'>{ title }</p>
+                <p className='text-base text-[var(--text)] truncate w-60'>{ author }</p>
                 {
-                    status === true ? <p className='font-semibold text-xl text-gray-500'>${ price }</p> : <p className="font-semibold text-xl text-red-500">Out Of Stock</p>
+                    status === true ? <p className='font-semibold text-lg text-[var(--text)]'>${ price }</p> : <p className="font-semibold text-lg text-[#D81313]">Out Of Stock</p>
                 }
             </div>
         </div>
