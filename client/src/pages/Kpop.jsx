@@ -67,13 +67,12 @@ const Kpop = () => {
         </div>
 
         {/* new arrivals carousel */}
-        <h1 className='text-center mt-6'>New Arrivals</h1>
+        <h1 className='text-center mt-12'>New Arrivals</h1>
         <NewArrivals />
       </section>
 
-      <section className='max-w-[1920px] mt-19 bg-[var(--bg)] w-full flex flex-col items-center'>
+      <section className='max-w-[1920px] mt-12 bg-[var(--bg)] w-full flex flex-col items-center justify-self-center'>
         <h1 className='mt-6'>Our Products</h1>
-        {/* <StoreFilter filters={filters} onChange={(vals) => console.log(vals)} /> */}
         <p className="italic ">
           *Holds available for <span className="italic font-bold">1 week</span>
         </p>
@@ -102,7 +101,7 @@ const Kpop = () => {
                 selections={prodTypes} />
             </div>
           </div>
-           <div className='w-full flex flex-col'>
+          <div className='w-full flex flex-col'>
             <div className='mb-3 flex self-end max-w-60 w-full'>
               <p className='text-gray-600'>SORT BY</p>
             </div>
