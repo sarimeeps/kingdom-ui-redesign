@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/* @plugin "@headlessui/tailwindcss"; */
 
 :root {
   --text: #3c3c3c;
@@ -29,6 +30,7 @@
     font-size: 1rem;
   } 
 }
+
 
 #slogan {
   font-family: "Homemade Apple", cursive;
