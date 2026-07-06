@@ -6,7 +6,7 @@ import bookclub from '../assets/book_shop/bookclub.jpg';
 import BookItem from '../components/BookItem.jsx';
 import Pagination from '../components/Pagination.jsx';
 import Filter from '../components/Filter.jsx';
-
+import Sorter from '../components/Sorter.jsx';
 
 const Bookstore = () => {
 
@@ -45,7 +45,9 @@ const Bookstore = () => {
   const authors = [...new Set(genreFilteredBooks.map(book => book.author))]
   const status = ['In Stock', 'Out of Stock']
 
-
+  //retrieving prices and titles for sorting component
+  const bookPrices = [books.map(book => book.price)]
+  const bookTitles = [books.map(book => book.title)]
 
   useEffect(() => {
     setCurrentPage(1)
@@ -115,11 +117,8 @@ const Bookstore = () => {
               <p className='text-gray-600'>SORT BY</p>
             </div>
             <div className='w-full flex justify-end'>
-              <Filter
-                category='Price'
-                choice={currentGenre}
-                setChoice={setCurrentGenre}
-                selections={genres} />
+              <Sorter
+                items={filteredBooks}/>
             </div>
           </div>
         </div>
