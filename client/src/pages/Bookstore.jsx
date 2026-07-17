@@ -32,6 +32,8 @@ const Bookstore = () => {
   const [currentAuthor, setCurrentAuthor] = useState('')
   const [currentStatus, setCurrentStatus] = useState('')
 
+  const [order, setOrder] = useState('')
+
   const filteredBooks = books
                         .filter(book => currentGenre ? book.genre === currentGenre : true)
                         .filter(book => currentAuthor ? book.author === currentAuthor : true)
@@ -45,9 +47,20 @@ const Bookstore = () => {
   const authors = [...new Set(genreFilteredBooks.map(book => book.author))]
   const status = ['In Stock', 'Out of Stock']
 
-  //retrieving prices and titles for sorting component
-  const bookPrices = [books.map(book => book.price)]
-  const bookTitles = [books.map(book => book.title)]
+  const sortedBooks = [...filteredBooks].sort((a, b) => {
+    switch (order) {
+      case 'Price: Low to High':
+        return a.price - b.price;
+      case 'Price: High to Low':
+        return b.price - a.price;
+      case 'Alphabetically, A-Z':
+        return a.title.localeCompare(b.title);
+      case 'Alphabetically, Z-A':
+        return b.title.localeCompare(a.title);
+      default:
+        return 0;
+    }
+  })
 
   useEffect(() => {
     setCurrentPage(1)
@@ -65,7 +78,7 @@ const Bookstore = () => {
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
 
-  const currentCards = filteredBooks.slice(firstCardIndex, lastCardIndex);
+  const currentCards = sortedBooks.slice(firstCardIndex, lastCardIndex);
 
   return (
     <div className='flex flex-col items-center mt-10 mb-3'>
@@ -118,7 +131,7 @@ const Bookstore = () => {
             </div>
             <div className='w-full flex justify-end'>
               <Sorter
-                items={filteredBooks}/>
+                onSortChange={setOrder}/>
             </div>
           </div>
         </div>
@@ -137,7 +150,7 @@ const Bookstore = () => {
         </ul>
         <div className='m-5'>
           <Pagination
-            totalCards={filteredBooks.length}
+            totalCards={sortedBooks.length}
             cardsPerPage={cardsPerPage}
             setCurrentPage={setCurrentPage}
             currentPage={currentPage}
