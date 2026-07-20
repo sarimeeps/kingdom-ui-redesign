@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router';
 import './App.css'
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage'
 import AboutUs from './pages/AboutUs'
@@ -24,6 +25,7 @@ function App() {
         </header>
 
         <main>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<AboutUs />} />
@@ -33,7 +35,7 @@ function App() {
             <Route path="/karaoke" element={<Karaoke />} />
             <Route path="/events" element={<Events />} />
             <Route path="/faq" element={<Faq />} />
-            
+
           </Routes>
         </main>
 
