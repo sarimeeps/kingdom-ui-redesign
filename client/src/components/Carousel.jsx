@@ -13,7 +13,7 @@ import carousel3 from '../assets/home_carousel/carousel3.png'
 const Carousel = () => {
 
     return (
-        <div className="w-full max-w-[1905px]">
+        <div className="w-full max-w-[1905px] px-4">
 
             <Swiper
                 modules={[Pagination, Autoplay]}
@@ -30,7 +30,7 @@ const Carousel = () => {
                     disableOnInteraction: false,
                     pauseOnMouseEnter: false,
                 }}
-                className='h-140 md:h-150 lg:h-160 w-full my-4'
+                className='h-140 md:h-150 lg:h-160 w-full my-6 rounded-xl'
             >
                 {[
                     carousel1,

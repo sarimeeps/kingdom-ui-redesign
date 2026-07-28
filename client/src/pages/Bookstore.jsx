@@ -35,9 +35,9 @@ const Bookstore = () => {
   const [order, setOrder] = useState('')
 
   const filteredBooks = books
-                        .filter(book => currentGenre ? book.genre === currentGenre : true)
-                        .filter(book => currentAuthor ? book.author === currentAuthor : true)
-                        .filter(book => !currentStatus || book.status === (currentStatus === 'In Stock'))
+    .filter(book => currentGenre ? book.genre === currentGenre : true)
+    .filter(book => currentAuthor ? book.author === currentAuthor : true)
+    .filter(book => !currentStatus || book.status === (currentStatus === 'In Stock'))
   const genreFilteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre : true)
 
   //TODO: Improve filter logic so each filter option is based on other active filters
@@ -81,39 +81,42 @@ const Bookstore = () => {
   const currentCards = sortedBooks.slice(firstCardIndex, lastCardIndex);
 
   return (
-    <div className='flex flex-col items-center mt-10 mb-3'>
-      <section className='flex flex-row justify-center w-full max-w-[1920px] space-x-18 my-15 px-4'>
-        <div className='justify-items-center'>
-          <div className='max-w-3xl h-full content-center'>
-            <h1 className='my-6 text-center lg:text-start'>Join Our Book Club</h1>
-            <hr className="hidden lg:block w-12 h-1 mb-9 mt-2 bg-[var(--text-h)] "></hr>
-            <p className='text-center lg:text-left lg:text-[1.375rem] md:text-xl text-lg'>Here at Kingdom, we host monthly book clubs featuring romance and queer titles. Anyone and everyone is welcome to join at anytime!</p>
-            <Link to='/events' className='w-fit flex mx-auto lg:mx-0 items-center gap-4 mt-6 text-[#ffffff] font-(family-name:--btn-font) lg:text-base md:text-sm font-bold bg-[var(--button)] border-2 border-white rounded-2xl px-4 py-2 active:bg-[var(--text-h)] active:font-extrabold'>
-              SEE EVENTS
-              <PiArrowCircleRight size={30} />
-            </Link>
+    <div className='flex flex-col items-center mb-3'>
+      <div className='w-full py-6 flex justify-center bg-linear-to-r from-[#E79CD6]/50 to-[#E7AAD4]/50 to-[#E6ABC9]/50 to-[#E8B7D2]/50 to-[#F4C6D3]/50'>
+        <section className='flex flex-col md:flex-row justify-center w-full max-w-[1920px] md:space-x-18 space-y-10 my-15 px-4'>
+          <div className='justify-items-center'>
+            <div className='max-w-3xl h-full md:mt-20'>
+              <h1 className='w-full text-center my-6 lg:text-start'>Join Our Book Club</h1>
+              <hr className="hidden lg:block  w-12 h-1 mb-9 mt-2 bg-[var(--text-h)] "></hr>
+              <p className='text-center lg:text-left lg:text-[1.375rem] md:text-xl text-lg'>Here at Kingdom, we host monthly book clubs featuring romance and queer titles. Anyone and everyone is welcome to join at anytime!</p>
+              <Link to='/events' className='w-fit flex mx-auto lg:mx-0 items-center gap-4 mt-6 text-[#ffffff] font-(family-name:--btn-font) lg:text-base md:text-sm font-bold bg-[var(--button)] border-2 border-white rounded-2xl px-4 py-2 active:bg-[var(--text-h)] active:font-extrabold'>
+                SEE EVENTS
+                <PiArrowCircleRight size={30} />
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className='flex justify-center'>
-          <div className='aspect-[4/3] max-h-110 max-w-170 overflow-hidden border rounded-xl border-transparent'>
-            <img src={bookclub} alt="" className='w-full h-full object-cover' />
+          <div className='flex justify-center'>
+            <div className='aspect-[4/3] max-h-90 max-w-170 md:max-h-110 overflow-hidden border rounded-xl border-transparent'>
+              <img src={bookclub} alt="" className='w-full h-full object-cover' />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <section className='max-w-[1920px] mt-19 bg-[var(--bg)] w-full flex flex-col items-center'>
-        <h1 className='mt-16'>Our Books</h1>
+        <h1 className=''>Our Books</h1>
         <div className='flex flex-row max-w-390 w-full mt-9 mb-12 px-3'>
           <div className='w-full flex flex-col'>
             <div className='mb-3'>
               <p className='text-gray-600'>FILTER BY</p>
             </div>
-            <div className='w-full flex flex-row space-x-6'>
+            <div className='w-full flex flex-col md:flex-row space-x-6 space-y-3'>
               <Filter
                 category='Availability'
                 choice={currentStatus}
                 setChoice={setCurrentStatus}
                 selections={status} />
-                <Filter
+              <Filter
                 category='Genre'
                 choice={currentGenre}
                 setChoice={setCurrentGenre}
@@ -131,7 +134,7 @@ const Bookstore = () => {
             </div>
             <div className='w-full flex justify-end'>
               <Sorter
-                onSortChange={setOrder}/>
+                onSortChange={setOrder} />
             </div>
           </div>
         </div>
