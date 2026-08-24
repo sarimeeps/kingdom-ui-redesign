@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import NewArrivals from '../components/NewArrivals'
 import carousel1 from '../assets/home_carousel/carousel1.png';
+import lightsticks from '../assets/kpop_page/lightsticks.jpg'
 import Filter from '../components/Filter';
 import KpopListing from '../components/KpopListing';
 import Pagination from '../components/Pagination.jsx';
@@ -55,16 +55,27 @@ const Kpop = () => {
   const currentCards = filteredKpop.slice(firstCardIndex, lastCardIndex);
 
   return (
-    <div className='relative mx-auto w-full px-2 py-6'>
+    <div className='relative mx-auto w-full px-4 py-6'>
+      <div id="large-gradient" className="absolute top-0 left-0 -z-10 h-175 lg:h-183 md:h-190 w-full bg-linear-to-b from-[#E193CD]/80 from-30% via-[#E6ABC9]/60 via-60% to-[#F4C6D3]/0 to-100%"></div>
 
-      <section className='max-w-[1920px] bg-[var(--bg)] w-full flex flex-col items-center justify-self-center'>
-        <h1 className='mt-6'>Our Products</h1>
+      <section>
+        <div className='max-w-[1920px] bg-white rounded-xl flex items-center justify-center mx-auto w-full p-4 md:p-6 '>
+          <img
+            src={lightsticks}
+            alt="New Arrivals"
+            className="relative w-full aspect-video rounded-xl"
+          />
+        </div>
+      </section>
+
+      <section className='max-w-[1920px] mt-12 bg-[var(--bg)] w-full flex flex-col items-center justify-self-center'>
+        <h1 className='mt-6 text-center'>Our Products</h1>
         <p className="italic ">
           *Holds available for <span className="italic font-bold">1 week</span>
         </p>
 
         {/* filters for listings */}
-        <div className='relative z-50 flex flex-row max-w-390 w-full mt-9 mb-12 px-3'>
+        <div className='relative z-10 flex flex-row max-w-390 w-full mt-9 mb-12 px-3'>
           <div className='w-full flex flex-col'>
             <div className='mb-3'>
               <p className='text-gray-600'>FILTER BY</p>
@@ -102,10 +113,10 @@ const Kpop = () => {
         </div>
 
         {/* product listings */}
-        <ul className='relative max-w-390 w-full grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 px-10'>
+        <ul className='relative max-w-390 w-full grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 px-4 sm:px-6 md:px-10'>
           {
             currentCards.map((product, index) => (
-              <li key={product.id} className='content-center mx-auto'>
+              <li key={product.id} className='w-full'>
                 <KpopListing
                   title={product.title}
                   group={product.group}

@@ -15,7 +15,7 @@ const Filter = ({ category, choice, setChoice, selections = [] }) => {
                 <IoIosArrowDown className={`${isOpen ? 'rotate-180' : 'rotate-0'} transition duration-300`} size={20} color='gray' />
             </div>
             {isOpen && (
-                <ul onMouseLeave={() => setIsOpen(false)} className="absolute shadow border border-gray-200 top-9 bg-[#fff] w-full text-gray-800 text-md max-h-60 overflow-y-auto overflow-x-hidden">
+                <ul onMouseLeave={() => setIsOpen(false)} className="absolute shadow border border-gray-200 z-10 top-9 bg-[#fff] w-full text-gray-800 text-md max-h-60 overflow-y-auto overflow-x-hidden">
                     <li
                         onClick={() => {
                             setChoice('');
