@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 
-const Filter = ({ category, choice, setChoice, selections = [] }) => {
+const Filter = ({ category, choice, setChoice, selections = [], counts = {} }) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -26,19 +26,25 @@ const Filter = ({ category, choice, setChoice, selections = [] }) => {
                             All {category}s
                         </div>
                     </li>
-                    {selections.map(select => (
+                    {selections.map(select => {
+                        const count = counts[select] ?? 0;
+                        const isDisabled = count <= 1;
+                        return(
                         <li
                             key={select}
+                            aria-disabled={isDisabled}
                             onClick={() => {
+                                if (!isDisabled) return;
                                 setChoice(select)
                                 setIsOpen(false)
                             }}
-                            className="cursor-pointer hover:bg-gray-200 hover:text-gray-800">
-                            <div className="py-1 pl-2 transition-transform duration-200 hover:translate-x-1 capitalize">
+                            className={isDisabled ? "cursor-not-allowed text-gray-300" : "cursor-pointer hover:bg-gray-200 hover:text-gray-800"}>
+                            <div className={`py-1 pl-2 transition-transform duration-200 hover:translate-x-1 capitalize ${isDisabled ? '' : 'hover:translate-x-1'}`}>
                                 {select}
                             </div>
                         </li>
-                    ))}
+                    )
+})}
                 </ul>
             )}
         </div>

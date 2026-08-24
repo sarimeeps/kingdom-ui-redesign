@@ -4,6 +4,7 @@ import lightsticks from '../assets/kpop_page/lightsticks.jpg'
 import Filter from '../components/Filter';
 import KpopListing from '../components/KpopListing';
 import Pagination from '../components/Pagination.jsx';
+import Sorter from '../components/Sorter'
 
 const Kpop = () => {
 
@@ -26,6 +27,8 @@ const Kpop = () => {
   const [currentProdType, setCurrentProdType] = useState('')
   const [currentArtist, setCurrentArtist] = useState('')
   const [currentStatus, setCurrentStatus] = useState('')
+  const [order, setOrder] = useState('')
+
 
   const filteredKpop = products
     .filter(product => currentProdType ? product.type === currentProdType : true)
@@ -33,9 +36,48 @@ const Kpop = () => {
     .filter(product => !currentStatus || product.status === (currentStatus === 'In Stock'))
   const prodTypeFilteredKpop = products.filter(product => currentProdType ? product.type === currentProdType : true)
 
-  const prodTypes = [...new Set(products.map(product => product.type))]
-  const artists = [...new Set(prodTypeFilteredKpop.map(product => product.group))]
-  const status = ['In Stock', 'Out of Stock']
+  const allProdTypes = [...new Set(products.map(product => product.type))]
+  const allArtists = [...new Set(prodTypeFilteredKpop.map(product => product.group))]
+  const allStatus = ['In Stock', 'Out of Stock']
+
+// Count of matching products per option with other active filters
+  const getProdTypeCount = (type) =>
+    products
+      .filter(p=> p.type === type)
+      .filter(p=> currentArtist ? p.group === currentArtist : true)
+      .filter(p=> !currentStatus || p.status === (currentStatus === 'In Stock'))
+      .length
+
+  const getArtistCount = (artist) =>
+    products
+      .filter(p=> p.group === artist)
+      .filter(p=> currentProdType ? p.type === currentProdType : true)
+      .filter(p=> !currentStatus || p.status === (currentStatus === 'In Stock'))
+      .length
+
+  const getStatusCount = (statusLabel) =>
+    products
+      .filter(p=> p.status === (statusLabel === 'In Stock'))
+      .filter(p=> currentProdType ? p.type === currentProdType : true)
+      .filter(p=> currentArtist ? p.group === currentArtist : true)
+      .length
+
+  const sortedKpop = [...filteredKpop].sort((a, b) => {
+    switch (order) {
+      case 'Price: Low to High':
+        return a.price - b.price;
+      case 'Price: High to Low':
+        return b.price - a.price;
+      case 'Alphabetically, A-Z':
+        return a.title.localeCompare(b.title);
+      case 'Alphabetically, Z-A':
+        return b.title.localeCompare(a.title);
+      default:
+        return 0;
+    }
+  })
+
+
 
   useEffect(() => {
     setCurrentPage(1)
@@ -52,7 +94,11 @@ const Kpop = () => {
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
 
-  const currentCards = filteredKpop.slice(firstCardIndex, lastCardIndex);
+  const currentCards = sortedKpop.slice(firstCardIndex, lastCardIndex);
+
+  const prodTypeCounts = Object.fromEntries(allProdTypes.map(t => [t, getProdTypeCount(t)]))
+  const artistCounts = Object.fromEntries(allArtists.map(a => [a, getArtistCount(a)]))
+  const statusCounts = Object.fromEntries(allStatus.map(s => [s, getStatusCount(s)]))
 
   return (
     <div className='relative mx-auto w-full px-4 py-6'>
@@ -85,17 +131,23 @@ const Kpop = () => {
                 category='Availability'
                 choice={currentStatus}
                 setChoice={setCurrentStatus}
-                selections={status} />
+                selections={allStatus} 
+                counts={statusCounts}
+                />
               <Filter
                 category='Artist'
                 choice={currentArtist}
                 setChoice={setCurrentArtist}
-                selections={artists} />
+                selections={allArtists} 
+                counts={artistCounts}
+                />
               <Filter
                 category='Type'
                 choice={currentProdType}
                 setChoice={setCurrentProdType}
-                selections={prodTypes} />
+                selections={allProdTypes} 
+                counts={prodTypeCounts}
+                />
             </div>
           </div>
           <div className='w-full flex flex-col'>
@@ -103,11 +155,10 @@ const Kpop = () => {
               <p className='text-gray-600'>SORT BY</p>
             </div>
             <div className='w-full flex justify-end'>
-              <Filter
-                category='Price'
-                choice={currentArtist}
-                setChoice={setCurrentArtist}
-                selections={artists} />
+              <Sorter
+               onSortChange={setOrder}
+               disabled={filteredKpop.length <= 1}
+               />
             </div>
           </div>
         </div>
