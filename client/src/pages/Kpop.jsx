@@ -57,21 +57,7 @@ const Kpop = () => {
   return (
     <div className='relative mx-auto w-full px-2 py-6'>
 
-      <section>
-        <div className='max-w-[1920px] bg-white rounded-xl flex items-center justify-center mx-auto w-full '>
-          <img
-            src={carousel1}
-            alt="New Arrivals"
-            className="w-full h-135 m-10 object-cover rounded-xl"
-          />
-        </div>
-
-        {/* new arrivals carousel */}
-        <h1 className='text-center mt-12'>New Arrivals</h1>
-        <NewArrivals />
-      </section>
-
-      <section className='max-w-[1920px] mt-12 bg-[var(--bg)] w-full flex flex-col items-center justify-self-center'>
+      <section className='max-w-[1920px] bg-[var(--bg)] w-full flex flex-col items-center justify-self-center'>
         <h1 className='mt-6'>Our Products</h1>
         <p className="italic ">
           *Holds available for <span className="italic font-bold">1 week</span>
