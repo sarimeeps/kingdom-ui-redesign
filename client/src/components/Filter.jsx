@@ -28,13 +28,13 @@ const Filter = ({ category, choice, setChoice, selections = [], counts = {} }) =
                     </li>
                     {selections.map(select => {
                         const count = counts[select] ?? 0;
-                        const isDisabled = count <= 1;
+                        const isDisabled = count === 0;
                         return(
                         <li
                             key={select}
                             aria-disabled={isDisabled}
                             onClick={() => {
-                                if (!isDisabled) return;
+                                if (isDisabled) return;
                                 setChoice(select)
                                 setIsOpen(false)
                             }}

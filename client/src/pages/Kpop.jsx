@@ -100,6 +100,8 @@ const Kpop = () => {
   const artistCounts = Object.fromEntries(allArtists.map(a => [a, getArtistCount(a)]))
   const statusCounts = Object.fromEntries(allStatus.map(s => [s, getStatusCount(s)]))
 
+
+  console.log('artistCounts:', artistCounts);
   return (
     <div className='relative mx-auto w-full px-4 py-6'>
       <div id="large-gradient" className="absolute top-0 left-0 -z-10 h-175 lg:h-183 md:h-190 w-full bg-linear-to-b from-[#E193CD]/80 from-30% via-[#E6ABC9]/60 via-60% to-[#F4C6D3]/0 to-100%"></div>
@@ -157,7 +159,7 @@ const Kpop = () => {
             <div className='w-full flex justify-end'>
               <Sorter
                onSortChange={setOrder}
-               disabled={filteredKpop.length <= 1}
+               disabled={filteredKpop.length === 0}
                />
             </div>
           </div>
