@@ -79,7 +79,7 @@ const Kpop = () => {
         </p>
 
         {/* filters for listings */}
-        <div className='relative z-50 flex flex-row max-w-390 w-full mt-9 mb-12 px-3'>
+        <div className='relative z-10 flex flex-row max-w-390 w-full mt-9 mb-12 px-3'>
           <div className='w-full flex flex-col'>
             <div className='mb-3'>
               <p className='text-gray-600'>FILTER BY</p>

@@ -29,7 +29,7 @@ const Events = () => {
               image={club}
               event="Say You Swear by Meagan Brandy"
               shop="Book Club"
-              desc="We will be discussing our thorughts on Say You Swear by Meagan Brandy, our likes/dislikes, and star rating!"
+              desc="We will be discussing our thoughts on Say You Swear by Meagan Brandy, our likes/dislikes, and star rating!"
             />
           </a>
           <a href="https://www.instagram.com/kingdomofkpopandmore/p/DUZiETZDNU-/">
