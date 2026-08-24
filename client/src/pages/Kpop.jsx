@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import NewArrivals from '../components/NewArrivals'
 import carousel1 from '../assets/home_carousel/carousel1.png';
+import lightsticks from '../assets/kpop_page/lightsticks.jpg'
 import Filter from '../components/Filter';
 import KpopListing from '../components/KpopListing';
 import Pagination from '../components/Pagination.jsx';
@@ -59,17 +59,13 @@ const Kpop = () => {
       <div id="large-gradient" className="absolute top-0 left-0 -z-10 h-175 lg:h-183 md:h-190 w-full bg-linear-to-b from-[#E193CD]/80 from-30% via-[#E6ABC9]/60 via-60% to-[#F4C6D3]/0 to-100%"></div>
 
       <section>
-        <div className='max-w-[1920px] bg-white rounded-xl flex items-center justify-center mx-auto w-full '>
+        <div className='max-w-[1920px] bg-white rounded-xl flex items-center justify-center mx-auto w-full p-4 md:p-6 '>
           <img
-            src={carousel1}
+            src={lightsticks}
             alt="New Arrivals"
-            className="w-full h-140 m-10 object-cover rounded-xl"
+            className="relative w-full aspect-video rounded-xl"
           />
         </div>
-
-        {/* new arrivals carousel */}
-        <h1 className='text-center mt-15'>New Arrivals</h1>
-        <NewArrivals />
       </section>
 
       <section className='max-w-[1920px] mt-12 bg-[var(--bg)] w-full flex flex-col items-center justify-self-center'>
@@ -117,10 +113,10 @@ const Kpop = () => {
         </div>
 
         {/* product listings */}
-        <ul className='relative max-w-390 w-full grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 px-10'>
+        <ul className='relative max-w-390 w-full grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5 px-4 sm:px-6 md:px-10'>
           {
             currentCards.map((product, index) => (
-              <li key={product.id} className='content-center mx-auto'>
+              <li key={product.id} className='w-full'>
                 <KpopListing
                   title={product.title}
                   group={product.group}
