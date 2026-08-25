@@ -14,7 +14,7 @@ const Bookstore = () => {
 
   //loading bookstore inventory
   useEffect(() => {
-    fetch("/data/books.json")
+    fetch(`${import.meta.env.VITE_API_URL}/books`)
       .then(res => {
         if (!res.ok) {
           throw new Error("Failed to load books")

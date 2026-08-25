@@ -10,7 +10,7 @@ const Kpop = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("/data/kpop_merch.json")
+    fetch(`${import.meta.env.VITE_API_URL}/kpop_merch`)
       .then(res => {
         if (!res.ok) {
           throw new Error("Failed to load products")
