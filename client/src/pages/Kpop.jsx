@@ -81,7 +81,6 @@ const Kpop = () => {
 
   useEffect(() => {
     setCurrentPage(1)
-    setCurrentArtist('')
   }, [currentProdType])
 
   useEffect(() => {
