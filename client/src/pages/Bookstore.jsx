@@ -43,9 +43,30 @@ const Bookstore = () => {
   //TODO: Improve filter logic so each filter option is based on other active filters
 
   //retrieving genres, authors, and book status to display in filter components
-  const genres = [...new Set(books.map(book => book.genre))]
-  const authors = [...new Set(genreFilteredBooks.map(book => book.author))]
-  const status = ['In Stock', 'Out of Stock']
+  const allGenres = [...new Set(books.map(book => book.genre))]
+  const allAuthors = [...new Set(genreFilteredBooks.map(book => book.author))]
+  const allStatus = ['In Stock', 'Out of Stock']
+
+  const getGenreCount = (genre) =>
+    books
+      .filter(b => b.genre === genre)
+      .filter(b => currentAuthor ? b.author === currentAuthor : true)
+      .filter(b => !currentStatus || b.status === (currentStatus === 'In Stock'))
+      .length
+      
+  const getAuthorCount = (author) =>
+    books
+      .filter(b => b.author === author)
+      .filter(b => currentGenre ? b.genre === currentGenre : true)
+      .filter(b => !currentStatus || b.status === (currentStatus === 'In Stock'))
+      .length
+      
+  const getStatusCount = (statusLabel) =>
+    books
+      .filter(b => b.status === (statusLabel === 'In Stock'))
+      .filter(b => currentGenre ? b.genre === currentGenre : true)
+      .filter(b => currentAuthor ? b.author === currentAuthor : true)
+      .length
 
   const sortedBooks = [...filteredBooks].sort((a, b) => {
     switch (order) {
@@ -64,7 +85,7 @@ const Bookstore = () => {
 
   useEffect(() => {
     setCurrentPage(1)
-    setCurrentAuthor('')
+    // setCurrentAuthor('')
   }, [currentGenre])
 
   useEffect(() => {
@@ -79,6 +100,10 @@ const Bookstore = () => {
   const firstCardIndex = lastCardIndex - cardsPerPage;
 
   const currentCards = sortedBooks.slice(firstCardIndex, lastCardIndex);
+
+  const genreCounts = Object.fromEntries(allGenres.map(g => [g, getGenreCount(g)]))
+  const authorCounts = Object.fromEntries(allAuthors.map(a => [a, getAuthorCount(a)]))
+  const statusCounts = Object.fromEntries(allStatus.map(s => [s, getStatusCount(s)]))
 
   return (
     <div className='flex flex-col items-center mb-3'>
@@ -115,17 +140,23 @@ const Bookstore = () => {
                 category='Availability'
                 choice={currentStatus}
                 setChoice={setCurrentStatus}
-                selections={status} />
+                selections={allStatus}
+                counts={statusCounts}
+                />
               <Filter
                 category='Genre'
                 choice={currentGenre}
                 setChoice={setCurrentGenre}
-                selections={genres} />
+                selections={allGenres}
+                counts={genreCounts}
+                />
               <Filter
                 category='Author'
                 choice={currentAuthor}
                 setChoice={setCurrentAuthor}
-                selections={authors} />
+                selections={allAuthors}
+                counts={authorCounts}
+                />
             </div>
           </div>
           <div className='w-full flex flex-col'>
@@ -134,7 +165,9 @@ const Bookstore = () => {
             </div>
             <div className='w-full flex justify-end'>
               <Sorter
-                onSortChange={setOrder} />
+                onSortChange={setOrder} 
+                disabled={filteredBooks.length === 0}
+                />
             </div>
           </div>
         </div>
