@@ -40,26 +40,26 @@ const Kpop = () => {
   const allArtists = [...new Set(prodTypeFilteredKpop.map(product => product.group))]
   const allStatus = ['In Stock', 'Out of Stock']
 
-// Count of matching products per option with other active filters
+  // Count of matching products per option with other active filters
   const getProdTypeCount = (type) =>
     products
-      .filter(p=> p.type === type)
-      .filter(p=> currentArtist ? p.group === currentArtist : true)
-      .filter(p=> !currentStatus || p.status === (currentStatus === 'In Stock'))
+      .filter(p => p.type === type)
+      .filter(p => currentArtist ? p.group === currentArtist : true)
+      .filter(p => !currentStatus || p.status === (currentStatus === 'In Stock'))
       .length
 
   const getArtistCount = (artist) =>
     products
-      .filter(p=> p.group === artist)
-      .filter(p=> currentProdType ? p.type === currentProdType : true)
-      .filter(p=> !currentStatus || p.status === (currentStatus === 'In Stock'))
+      .filter(p => p.group === artist)
+      .filter(p => currentProdType ? p.type === currentProdType : true)
+      .filter(p => !currentStatus || p.status === (currentStatus === 'In Stock'))
       .length
 
   const getStatusCount = (statusLabel) =>
     products
-      .filter(p=> p.status === (statusLabel === 'In Stock'))
-      .filter(p=> currentProdType ? p.type === currentProdType : true)
-      .filter(p=> currentArtist ? p.group === currentArtist : true)
+      .filter(p => p.status === (statusLabel === 'In Stock'))
+      .filter(p => currentProdType ? p.type === currentProdType : true)
+      .filter(p => currentArtist ? p.group === currentArtist : true)
       .length
 
   const sortedKpop = [...filteredKpop].sort((a, b) => {
@@ -132,23 +132,23 @@ const Kpop = () => {
                 category='Availability'
                 choice={currentStatus}
                 setChoice={setCurrentStatus}
-                selections={allStatus} 
+                selections={allStatus}
                 counts={statusCounts}
-                />
+              />
               <Filter
                 category='Artist'
                 choice={currentArtist}
                 setChoice={setCurrentArtist}
-                selections={allArtists} 
+                selections={allArtists}
                 counts={artistCounts}
-                />
+              />
               <Filter
                 category='Type'
                 choice={currentProdType}
                 setChoice={setCurrentProdType}
-                selections={allProdTypes} 
+                selections={allProdTypes}
                 counts={prodTypeCounts}
-                />
+              />
             </div>
           </div>
           <div className='w-full flex flex-col'>
@@ -157,9 +157,9 @@ const Kpop = () => {
             </div>
             <div className='w-full flex justify-end'>
               <Sorter
-               onSortChange={setOrder}
-               disabled={filteredKpop.length === 0}
-               />
+                onSortChange={setOrder}
+                disabled={filteredKpop.length === 0}
+              />
             </div>
           </div>
         </div>

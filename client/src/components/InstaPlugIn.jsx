@@ -44,7 +44,7 @@ const InstaPlugin = () => {
                                     <p>Wed-Fri... more</p>
                                     <div className="flex gap-1">
                                         <PiLinkSimpleBold size={17} />
-                                        <p className='font-semibold'>www.eventbrite.com/e/armyrang-tickets-19863...</p>
+                                        <p className='font-semibold'>www.kingdomofkpopandmore.com and 1 more</p>
                                     </div>
                                     <p className='text-blue-500'>6000 Meadowbrook Mall Ct STE 1, Clemmons, North Carolina 27012</p>
                                 </div>
