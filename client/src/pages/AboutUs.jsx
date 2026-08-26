@@ -36,26 +36,26 @@ const AboutUs = () => {
           <TeamCard
             name="Deidre"
             image={Deidre}
-            group="BLACKPINK & Lisa"
-            novel="The Song of Achilles"
-            bakedGood="Chocolate Chip Cookies"
-            kingdomMemory="First K-pop album purchased"
+            group="Ateez & Doyoung (NCT 127)"
+            novel="Unsure"
+            bakedGood="Japanese Milk Bread"
+            kingdomMemory="Cake decorating with Idol Keesu"
           />
           <TeamCard
             name="Kaitlyn"
             image={Kaitlyn}
-            group="Stray Kids & Hyunjin"
-            novel="Red, White & Royal Blue"
-            bakedGood="Lemon Bars"
-            kingdomMemory="First book club attended at Kingdom"
+            group="Ateez & Jongho"
+            novel="Binding Thirteen - Chloe Walsh"
+            bakedGood="Cinnamon Bun"
+            kingdomMemory="Having first Idol (Keesu) visit Kingdom"
           />
           <TeamCard
             name="Morgan"
             image={Morgan}
             group="BTS & V"
-            novel="The Seven Husbands of Evelyn Hugo"
-            bakedGood="Red Velvet Cake"
-            kingdomMemory="First K-pop concert attended"
+            novel="Red Rising - Pierce Brown"
+            bakedGood="Brownie"
+            kingdomMemory="Having first Idol (Keesu) visit Kingdom"
           />
         </div>
       </div>

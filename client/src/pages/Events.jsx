@@ -11,7 +11,7 @@ const Events = () => {
     <div className='max-w-[1920px] flex flex-col items-center justify-center mx-auto w-full '>
       <div id="large-gradient" className="absolute top-0 -z-10 h-90 md:h-250 w-full bg-linear-to-b from-[#E193CD]/80 from-40% via-[#E6ABC9]/60 via-80% to-[#F4C6D3]/0 to-100%"></div>
 
-      <section className='bg-white w-[90%] rounded-xl p-[1.5%] mt-5 justify-center items-center'>
+      <section className='bg-white w-[75%] rounded-xl p-[1.5%] mt-5 justify-center items-center'>
         <img
           src={calendar}
           alt="Calendar"
