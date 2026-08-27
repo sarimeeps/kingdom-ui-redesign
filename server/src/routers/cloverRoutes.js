@@ -8,7 +8,7 @@ const CLOVER_MERCHANT_ID = process.env.CLOVER_MERCHANT_ID
 const CLOVER_API_TOKEN = process.env.CLOVER_API_TOKEN
 
 cloverRoutes.get('/items', async (req, res) => {
-    try{
+    try {
         const response = await fetch(
             `${CLOVER_BASE_URL}/v3/merchants/${CLOVER_MERCHANT_ID}/items?expand=itemStock`,
             {
@@ -16,11 +16,35 @@ cloverRoutes.get('/items', async (req, res) => {
                     'Authorization': `Bearer ${CLOVER_API_TOKEN}`,
                     'User-Agent': 'your-app-name/1.0'
                 }
-        }
-    )
-    const data = await response.json()
+            }
+        )
+        //const data = await response.json()
 
-    console.log(data)
+        const url = `${CLOVER_BASE_URL}/v3/merchants/${CLOVER_MERCHANT_ID}/items?expand=itemStock`
+        console.log('DEBUG full URL:', JSON.stringify(url))
+        if (!response.ok) {
+            const errorBody = await response.text()
+            console.error(`Clover API error (${response.status}):`, errorBody)
+            return res.status(response.status).json({ error: 'Clover API request failed' })
+        }
+
+        console.log('DEBUG status:', response.status)
+        const rawText = await response.text()
+        console.log('DEBUG raw body:', rawText)
+
+        if (!rawText) {
+            return res.status(response.status).json({ error: 'Empty response from Clover' })
+        }
+
+        const data = JSON.parse(rawText)
+
+
+        // const data = await response.json()
+
+        // console.log(data)
+        // console.log('DEBUG BASE_URL:', CLOVER_BASE_URL)
+        // console.log('DEBUG MERCHANT_ID:', CLOVER_MERCHANT_ID)
+        // console.log('DEBUG TOKEN length:', CLOVER_API_TOKEN?.length)
 
         res.json(data)
     } catch (error) {
