@@ -39,13 +39,6 @@ cloverRoutes.get('/items', async (req, res) => {
         const data = JSON.parse(rawText)
 
 
-        // const data = await response.json()
-
-        // console.log(data)
-        // console.log('DEBUG BASE_URL:', CLOVER_BASE_URL)
-        // console.log('DEBUG MERCHANT_ID:', CLOVER_MERCHANT_ID)
-        // console.log('DEBUG TOKEN length:', CLOVER_API_TOKEN?.length)
-
         res.json(data)
     } catch (error) {
         console.error('Error fetching items:', error)
