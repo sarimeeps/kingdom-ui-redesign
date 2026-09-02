@@ -13,18 +13,28 @@ const Bookstore = () => {
   const [books, setBooks] = useState([])
 
   //loading bookstore inventory
+  // useEffect(() => {
+  //   fetch(`${import.meta.env.VITE_API_URL}/books`)
+  //     .then(res => {
+  //       if (!res.ok) {
+  //         throw new Error("Failed to load books")
+  //       }
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       setBooks(data)
+  //     })
+  //     .catch(err => console.error(err))
+  // }, [])
+
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/books`)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error("Failed to load books")
-        }
-        return res.json();
-      })
-      .then(data => {
-        setBooks(data)
-      })
-      .catch(err => console.error(err))
+    const getItems = async () => {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/clover/books`)
+      const data = await response.json()
+
+      setBooks(data)
+    }
+    getItems()
   }, [])
 
 
@@ -75,9 +85,9 @@ const Bookstore = () => {
       case 'Price: High to Low':
         return b.price - a.price;
       case 'Alphabetically, A-Z':
-        return a.title.localeCompare(b.title);
+        return a.name.localeCompare(b.name);
       case 'Alphabetically, Z-A':
-        return b.title.localeCompare(a.title);
+        return b.name.localeCompare(a.name);
       default:
         return 0;
     }
@@ -177,10 +187,10 @@ const Bookstore = () => {
               <li key={book.id} className='content-center mx-auto'>
                 <BookItem
                   cover={book.cover}
-                  title={book.title}
+                  title={book.name}
                   author={book.author}
                   price={book.price}
-                  status={book.status} />
+                  status={book.available} />
               </li>
             ))}
         </ul>
