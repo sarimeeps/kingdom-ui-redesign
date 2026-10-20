@@ -5,9 +5,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import carousel1 from '../assets/home_carousel/carousel1.png'
-import carousel2 from '../assets/home_carousel/carousel2.png'
-import carousel3 from '../assets/home_carousel/carousel3.png'
+import carousel1 from '../assets/home_carousel/home_c1.png'
+import carousel2 from '../assets/home_carousel/home_c2.png'
+import carousel3 from '../assets/home_carousel/home_c3.png'
+import carousel4 from '../assets/home_carousel/home_c4.png'
 
 
 const Carousel = () => {
@@ -35,13 +36,14 @@ const Carousel = () => {
                 {[
                     carousel1,
                     carousel2,
-                    carousel3
+                    carousel3,
+                    carousel4
                 ].map((img, index) => (
                     <SwiperSlide key={index} className=''>
                         <img
                             src={img}
                             alt={`image-${index}`}
-                            className='h-full w-full object-fill' />
+                            className='h-full w-full object-cover' />
                     </SwiperSlide>
                 ))
                 }
