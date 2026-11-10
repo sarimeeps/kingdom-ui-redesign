@@ -1,5 +1,5 @@
 import React from 'react'
-import calendar from '../assets/events_page/october/oct26.png';
+import calendar from '../assets/events_page/october/Oct26.png';
 import EventCard from '../components/EventCard';
 import club from '../assets/events_page/october/oct_book.png';
 import trivia from '../assets/events_page/october/trivia.png';
