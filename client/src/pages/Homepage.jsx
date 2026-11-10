@@ -3,9 +3,9 @@ import Carousel from '../components/Carousel';
 import RouteCard from '../components/RouteCard';
 import InstaPlugin from '../components/InstaPlugIn';
 import front from '../assets/kingdom_front.png'
-import bake from '../assets/route_cards/baked-item.jpg';
-import kpop from '../assets/route_cards/kpop-items.png';
-import books from '../assets/route_cards/books.png';
+import bake from '../assets/route_cards/bake_card.png';
+import kpop from '../assets/route_cards/kpop_card.png';
+import books from '../assets/route_cards/book_card.png';
 import Insta from '../components/InstaLogo';
 import Tiktok from '../components/TiktokLogo';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -28,7 +28,7 @@ const Homepage = () => {
 
             <Carousel />
             {/* Shop Cards Section */}
-            <h1 id='slogan' className='text-center mt-20 mb-12'>"Feeding you through your eyes, ears, and mouth!"</h1>
+            <h1 id='slogan' className='text-center mt-5 mb-12'>"Feeding you through your eyes, ears, and mouth!"</h1>
             <ul className="w-full justify-center items-center flex flex-col mb-16 md:flex-row gap-6 lg:gap-15">
                 {homeCards.map(card => (
                     <li

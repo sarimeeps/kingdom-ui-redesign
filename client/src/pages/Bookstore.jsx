@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router'
 import { PiArrowCircleRight } from "react-icons/pi";
-import bookclub from '../assets/book_shop/bookclub.jpg';
+import bookclub from '../assets/book_shop/book_cta.png';
 import BookItem from '../components/BookItem.jsx';
 import Pagination from '../components/Pagination.jsx';
 import Filter from '../components/Filter.jsx';

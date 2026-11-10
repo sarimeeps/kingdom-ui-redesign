@@ -1,10 +1,11 @@
 import React from 'react'
-import calendar from '../assets/events_page/calendar.png';
+import calendar from '../assets/events_page/october/oct26.png';
 import EventCard from '../components/EventCard';
-import club from '../assets/events_page/book_club.png';
-import heart from '../assets/events_page/heart_cake.png';
-import verse from '../assets/events_page/verse_event.png';
-import xg from '../assets/events_page/xg_event.png';
+import club from '../assets/events_page/october/oct_book.png';
+import trivia from '../assets/events_page/october/trivia.png';
+import hallowteez from '../assets/events_page/october/hallowteez.png';
+import tubatu from '../assets/events_page/october/tubatu.png';
+
 
 const Events = () => {
   return (
@@ -24,36 +25,36 @@ const Events = () => {
         <h1 className="mt-12">Events at Kingdom</h1>
         <p className='text-2xl text-[var(--text-h)] pt-4'>Come and connect with your local K-pop community!</p>
         <div className='max-w-425 w-full grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 lg:grid-cols-3'>
-          <a href="https://www.instagram.com/p/DVOwNPAjk5X/?img_index=1">
+          <a href="https://www.instagram.com/p/DeABI4ZSVce/">
             <EventCard
               image={club}
-              event="Say You Swear by Meagan Brandy"
+              event="Twilight of Embers by Tessa Hale"
               shop="Book Club"
-              desc="We will be discussing our thoughts on Say You Swear by Meagan Brandy, our likes/dislikes, and star rating!"
+              desc="We will be discussing our thoughts on Twilight of Embers by Tessa Hale, our likes/dislikes, and star rating!"
             />
           </a>
-          <a href="https://www.instagram.com/kingdomofkpopandmore/p/DUZiETZDNU-/">
+          <a href="https://www.instagram.com/p/DeABI4ZSVce/">
             <EventCard
-              image={heart}
-              event="Vintage Heart Decorating Class"
-              shop="Bake Shop"
-              desc="Come decorate your very own vintage heart cake for this season of love!"
-            />
-          </a>
-          <a href="https://www.instagram.com/nckpophive/p/DU6QkqmjvCy/">
-            <EventCard
-              image={verse}
-              event="Get to Know 1Verse Event"
+              image={trivia}
+              event="5th GEN Guess the Song Trivia"
               shop="K-pop"
-              desc="Welcome to our Multiverse ✨ With 1VERSE on tour and heading to North Carolina for KoreaFest 2026 at the end of March, we’re celebrating!"
+              desc="Come test your knowledge of 5th generation K-pop groups and their songs! Join us for a fun and interactive trivia night!"
             />
           </a>
-          <a href="https://www.instagram.com/kingdomofkpopandmore/p/DVeldGXj-wM/">
+          <a href="https://www.instagram.com/p/DatUZJZyCiw/">
             <EventCard
-              image={xg}
-              event="XG Debutverse"
+              image={hallowteez}
+              event="HallowTEEZ"
               shop="K-pop"
-              desc="Come celebrate XG’s debut anniversary!"
+              desc="Set sail for HallowTEEZ: Grand Line Market, a One Piece-inspired Halloween celebration honoring ATEEZ’s 8th Debut Anniversary! ⏳✨"
+            />
+          </a>
+          <a href="https://www.instagram.com/p/DdZ82YCGjVK/?img_index=1">
+            <EventCard
+              image={tubatu}
+              event="TUBATU:Who Done It?"
+              shop="K-pop"
+              desc="Join us for a TXT inspired murder mystery game! Collect clues, solve riddles, and accomplish activities to solve the mystery!"
             />
           </a>
 
