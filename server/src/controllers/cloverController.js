@@ -1,21 +1,6 @@
 import { loadInventory } from '../services/cloverData.js'
 
-// export async function getAllItems(req, res) {
-//     try {
-//         const data = await loadInventory()
-
-//         const categories = [
-//             'K Pop',
-//             'Romance Books'
-//         ]
-
-//         const filteredInventory = data.elements.filter(item => item.categories?.elements?.some(category => categories.includes(category.name)))
-//         res.json(filteredInventory)
-//     } catch (err) {
-//         console.error('Error fetching items:', err)
-//         res.status(err.status || 500).json({ error: err.message || 'Failed to fetch items' })
-//     }
-// }
+// TODO: file for dev purposes, remove later
 
 const cache = {
     kpop: {
@@ -65,19 +50,8 @@ export async function getBookItems(req, res) {
 
         const data = await loadInventory(process.env.ROM_BOOK_CAT_ID)
 
-        cache.books.data = data.elements.map(book => {
-            const separator = ' by '
-            const separatorIndex = book.name.toLowerCase().lastIndexOf(separator)
-            
-            return {
-                ...book,
-                price: book.price / 100,
-                name: book.name.slice(0, separatorIndex),
-                author: book.name.slice(separatorIndex + separator.length),
-                status: book.available
-            }
-        })
 
+        cache.books.data = data.elements
         cache.books.timestamp = Date.now()
 
         res.json(cache.books.data)

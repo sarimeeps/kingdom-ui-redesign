@@ -3,7 +3,7 @@ const BookItem = ({cover, title, author, price, status}) => {
     return (
         <div className="max-w-60 h-full mb-2 mx-2">
             <div className="mb-2">
-                <img src={ cover } alt={cover} className='w-full h-90 object-cover' />
+                <img src={ cover } alt={`${title}'s Book Cover`} className='w-full h-90 object-cover flex items-center justify-center bg-gray-200 border border-gray-300 text-md' />
             </div>
             <div className="">
                 <p className='font-semibold text-[var(--text)] text-[1.375rem] truncate w-60'>{ title }</p>
