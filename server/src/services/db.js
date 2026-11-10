@@ -10,5 +10,19 @@ function loadJSON(filename){
     return JSON.parse(fs.readFileSync(filePath, 'utf-8'))
 }
 
-export const books = loadJSON('books.json')
 export const kpop_merch = loadJSON('kpop_merch.json')
+
+import 'dotenv/config'
+import { Pool } from 'pg'
+
+let pool = null;
+
+export function getPool() {
+    if (pool === null){
+        pool = new Pool({
+            connectionString: process.env.DATABASE_URL,
+        })
+    }
+    return pool;
+}
+

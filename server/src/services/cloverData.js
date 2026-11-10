@@ -4,11 +4,10 @@ const CLOVER_BASE_URL = process.env.CLOVER_BASE_URL
 const CLOVER_MERCHANT_ID = process.env.CLOVER_MERCHANT_ID
 const CLOVER_API_TOKEN = process.env.CLOVER_API_TOKEN
 
-export async function loadInventory(categoryId) {
-
+async function fetchPage(categoryId, { limit, offset }) {
     const params = new URLSearchParams({
-        limit: 100,
-        offset: 0,
+        limit,
+        offset,
         expand: 'itemStock'
     })
 
@@ -22,9 +21,7 @@ export async function loadInventory(categoryId) {
         }
     )
 
-    console.log(categoryId)
-
-    if (!response.ok){
+    if (!response.ok) {
         const errorText = await response.text()
         console.error(`Clover API error (${response.status}):`, errorText)
         const error = new Error('Clover API request failed')
@@ -32,17 +29,25 @@ export async function loadInventory(categoryId) {
         throw error
     }
 
-    console.log('Status:', response.status)
-    const data = await response.text()
+    const data = await response.json()
+    return data.elements ?? []
 
-    if (!data){
-        const error = new Error('Empty response from Clover')
-        error.status = response.status
-        throw error 
+}
+
+export async function loadInventory(categoryId, {max = Infinity, pageSize = 100} = {}) {
+
+    const elements = []
+    let offset = 0
+
+    while (elements.length < max){
+        const limit = Math.min(pageSize, max - elements.length)
+        const page = await fetchPage(categoryId, {limit, offset})
+
+        elements.push(...page)
+
+        if(page.length < limit) break
+        offset += page.length
     }
-
-    return JSON.parse(data)
-
-
+    return {elements}
 }
 

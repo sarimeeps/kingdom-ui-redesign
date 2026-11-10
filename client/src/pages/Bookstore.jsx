@@ -12,24 +12,9 @@ const Bookstore = () => {
 
   const [books, setBooks] = useState([])
 
-  //loading bookstore inventory
-  // useEffect(() => {
-  //   fetch(`${import.meta.env.VITE_API_URL}/books`)
-  //     .then(res => {
-  //       if (!res.ok) {
-  //         throw new Error("Failed to load books")
-  //       }
-  //       return res.json();
-  //     })
-  //     .then(data => {
-  //       setBooks(data)
-  //     })
-  //     .catch(err => console.error(err))
-  // }, [])
-
   useEffect(() => {
     const getItems = async () => {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/clover/books`)
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/books`)
       const data = await response.json()
 
       setBooks(data)
@@ -47,7 +32,7 @@ const Bookstore = () => {
   const filteredBooks = books
     .filter(book => currentGenre ? book.genre === currentGenre : true)
     .filter(book => currentAuthor ? book.author === currentAuthor : true)
-    .filter(book => !currentStatus || book.status === (currentStatus === 'In Stock'))
+    .filter(book => !currentStatus || book.available === (currentStatus === 'In Stock'))
   const genreFilteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre : true)
 
   //TODO: Improve filter logic so each filter option is based on other active filters
@@ -61,19 +46,19 @@ const Bookstore = () => {
     books
       .filter(b => b.genre === genre)
       .filter(b => currentAuthor ? b.author === currentAuthor : true)
-      .filter(b => !currentStatus || b.status === (currentStatus === 'In Stock'))
+      .filter(b => !currentStatus || b.available === (currentStatus === 'In Stock'))
       .length
       
   const getAuthorCount = (author) =>
     books
       .filter(b => b.author === author)
       .filter(b => currentGenre ? b.genre === currentGenre : true)
-      .filter(b => !currentStatus || b.status === (currentStatus === 'In Stock'))
+      .filter(b => !currentStatus || b.available === (currentStatus === 'In Stock'))
       .length
       
   const getStatusCount = (statusLabel) =>
     books
-      .filter(b => b.status === (statusLabel === 'In Stock'))
+      .filter(b => b.available === (statusLabel === 'In Stock'))
       .filter(b => currentGenre ? b.genre === currentGenre : true)
       .filter(b => currentAuthor ? b.author === currentAuthor : true)
       .length
@@ -104,7 +89,7 @@ const Bookstore = () => {
 
   //book grid pagination set up 
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 15;
+  const cardsPerPage = 20;
 
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
