@@ -24,7 +24,7 @@ const Homepage = () => {
 
     return (
         <div className='w-full flex flex-col items-center justify-center relative'>
-        <div id="large-gradient" className="absolute top-0 -z-10 h-175 lg:h-183 md:h-190 w-full bg-linear-to-b from-[#E193CD]/80 from-30% via-[#E6ABC9]/60 via-60% to-[#F4C6D3]/0 to-100%"></div>
+            <div id="large-gradient" className="absolute top-0 -z-10 h-175 lg:h-183 md:h-190 w-full bg-linear-to-b from-[#E193CD]/80 from-30% via-[#E6ABC9]/60 via-60% to-[#F4C6D3]/0 to-100%"></div>
 
             <Carousel />
             {/* Shop Cards Section */}
@@ -41,8 +41,8 @@ const Homepage = () => {
             </ul>
 
             {/* About Section */}
-            <section className="w-full justify-items-center mt-20 p-20 bg-linear-to-l from-[#E79CD6]/50 to-[#E6ABC9]/50 to-[#E8B7D2]/50 to-[#F4C6D3]/50">
-                <div className="grid lg:grid-cols-2 max-w-[1920px] gap-10">
+            <section className="w-full flex flex-col items-center mt-20 p-20 bg-linear-to-l from-[#E79CD6]/50 to-[#E6ABC9]/50 to-[#E8B7D2]/50 to-[#F4C6D3]/50">
+                <div className="justify-items-center items-center grid lg:grid-cols-2 max-w-[1920px] gap-10">
                     <div className="max-w-2xl w-full mx-auto mb-12">
                         <h1 className='lg:text-left text-center my-6 lg:mt-6'>Happy You're Here!</h1>
                         <hr className="hidden lg:block w-12 h-1 mb-9 mt-2 bg-[var(--text-h)] "></hr>
@@ -53,12 +53,12 @@ const Homepage = () => {
                             Our goal is to build a fun and supportive community where you can celebrate your favorite artists, authors, and more. Our physical store opened in <strong>Clemmons, NC</strong> in July 2024, and we’re excited to grow together with your support!
                         </p>
                         <Link to='/about' className='w-fit flex mx-auto lg:mx-0 items-center gap-4 mt-6 text-[#ffffff] font-(family-name:--btn-font) lg:text-base md:text-sm font-bold bg-[var(--button)] border-2 border-white rounded-2xl px-4 py-2 active:bg-[var(--text-h)] active:font-extrabold'>
-                                READ MORE
-                                <IoArrowForwardCircleOutline size={25}/>
+                            READ MORE
+                            <IoArrowForwardCircleOutline size={25} />
                         </Link>
                     </div>
                     <figure className="min-w-min p-0 justify-items-center lg:justify-items-end">
-                        <img src={front} alt="Kingdom's storefront" />
+                        <img src={front} alt="Kingdom's storefront" className='border rounded-xl border-transparent' />
                     </figure>
                 </div>
             </section>
@@ -74,7 +74,7 @@ const Homepage = () => {
                     <p className='lg:w-md font-(family-name:--sans) text-xl font-medium justify-center items-center'>Catch up on new arrivals and restock as we post updates on social media!</p>
                     <ul className='flex flex-col gap-6 mt-4 items-center lg:items-start justify-center font-(family-name:--btn-font)'>
                         {/* <li className='w-sm md:w-md rounded-2xl p-2 pl-4 bg-linear-to-r from-[#7638FA] from-[21%] via-[#E90097] via-[80%] via-[#FF0069] via-[85%] via-[#FF7A00] via-[90%] to-[#FFD600] to-[100%]'> */}
-                            <li className='w-sm md:w-md rounded-2xl p-2 pl-4 transition-transform duration-200 hover:translate-y-[-5px] bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
+                        <li className='w-sm md:w-md rounded-2xl p-2 pl-4 transition-transform duration-200 hover:translate-y-[-5px] bg-gradient-to-r from-[#ffd600] via-[#ff7a00] via-2% via-[#ff0069] via-8% via-[#e90097] via-11% to-[#7638fa] to-79%'>
                             <a href="https://www.instagram.com/kingdomofkpopandmore/"
                                 target="_blank"
                                 rel="noopener noreferrer"

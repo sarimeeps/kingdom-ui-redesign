@@ -102,7 +102,7 @@ const Kpop = () => {
 
   console.log('artistCounts:', artistCounts);
   return (
-    <div className='relative mx-auto w-full px-4 py-6'>
+    <div className='relative flex flex-col items-center w-full px-4 py-6'>
       <div id="large-gradient" className="absolute top-0 left-0 -z-10 h-175 lg:h-183 md:h-190 w-full bg-linear-to-b from-[#E193CD]/80 from-30% via-[#E6ABC9]/60 via-60% to-[#F4C6D3]/0 to-100%"></div>
 
       <section>
@@ -115,7 +115,7 @@ const Kpop = () => {
         </div>
       </section>
 
-      <section className='max-w-[1920px] mt-12 bg-[var(--bg)] w-full flex flex-col items-center justify-self-center'>
+      <section className='max-w-[1920px] mt-12 bg-[var(--bg)] w-full flex flex-col items-center'>
         <h1 className='mt-6 text-center'>Our Products</h1>
         <p className="italic ">
           *Holds available for <span className="italic font-bold">1 week</span>

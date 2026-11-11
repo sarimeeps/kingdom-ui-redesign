@@ -15,7 +15,7 @@ const FaqBox = ({ category, queries = [] }) => {
             <div onClick={handleIsOpen} className="border border-[#C89CAD] border-2 rounded-md bg-[#fff] drop-shadow-md p-4 w-full cursor-pointer">
                 <div className="flex flex-row">
                     <p className="text-2xl flex-1 font-semibold">{category}</p>
-                    <div className="flex-1 justify-items-end ">
+                    <div className="flex justify-items-end ">
                         <IoIosArrowDown size={30} className={`${isOpen ? 'rotate-180' : 'rotate-0'} transition-transform duration-300`} />
                     </div>
                 </div>
