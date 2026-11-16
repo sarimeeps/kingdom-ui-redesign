@@ -23,43 +23,30 @@ const Bookstore = () => {
   }, [])
 
 
-  const [currentGenre, setCurrentGenre] = useState('')
   const [currentAuthor, setCurrentAuthor] = useState('')
   const [currentStatus, setCurrentStatus] = useState('')
 
   const [order, setOrder] = useState('')
 
   const filteredBooks = books
-    .filter(book => currentGenre ? book.genre === currentGenre : true)
     .filter(book => currentAuthor ? book.author === currentAuthor : true)
     .filter(book => !currentStatus || book.available === (currentStatus === 'In Stock'))
-  const genreFilteredBooks = books.filter(book => currentGenre ? book.genre === currentGenre : true)
 
   //TODO: Improve filter logic so each filter option is based on other active filters
 
-  //retrieving genres, authors, and book status to display in filter components
-  const allGenres = [...new Set(books.map(book => book.genre))]
-  const allAuthors = [...new Set(genreFilteredBooks.map(book => book.author))]
+  //retrieving authors, and book status to display in filter components
+  const allAuthors = [...new Set(books.map(book => book.author))]
   const allStatus = ['In Stock', 'Out of Stock']
 
-  const getGenreCount = (genre) =>
-    books
-      .filter(b => b.genre === genre)
-      .filter(b => currentAuthor ? b.author === currentAuthor : true)
-      .filter(b => !currentStatus || b.available === (currentStatus === 'In Stock'))
-      .length
-      
   const getAuthorCount = (author) =>
     books
       .filter(b => b.author === author)
-      .filter(b => currentGenre ? b.genre === currentGenre : true)
       .filter(b => !currentStatus || b.available === (currentStatus === 'In Stock'))
       .length
       
   const getStatusCount = (statusLabel) =>
     books
       .filter(b => b.available === (statusLabel === 'In Stock'))
-      .filter(b => currentGenre ? b.genre === currentGenre : true)
       .filter(b => currentAuthor ? b.author === currentAuthor : true)
       .length
 
@@ -80,23 +67,17 @@ const Bookstore = () => {
 
   useEffect(() => {
     setCurrentPage(1)
-    // setCurrentAuthor('')
-  }, [currentGenre])
-
-  useEffect(() => {
-    setCurrentPage(1)
   }, [currentAuthor, currentStatus])
 
   //book grid pagination set up 
   const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 20;
+  const cardsPerPage = 30;
 
   const lastCardIndex = currentPage * cardsPerPage;
   const firstCardIndex = lastCardIndex - cardsPerPage;
 
   const currentCards = sortedBooks.slice(firstCardIndex, lastCardIndex);
 
-  const genreCounts = Object.fromEntries(allGenres.map(g => [g, getGenreCount(g)]))
   const authorCounts = Object.fromEntries(allAuthors.map(a => [a, getAuthorCount(a)]))
   const statusCounts = Object.fromEntries(allStatus.map(s => [s, getStatusCount(s)]))
 
@@ -139,13 +120,6 @@ const Bookstore = () => {
                 counts={statusCounts}
                 />
               <Filter
-                category='Genre'
-                choice={currentGenre}
-                setChoice={setCurrentGenre}
-                selections={allGenres}
-                counts={genreCounts}
-                />
-              <Filter
                 category='Author'
                 choice={currentAuthor}
                 setChoice={setCurrentAuthor}
@@ -166,7 +140,7 @@ const Bookstore = () => {
             </div>
           </div>
         </div>
-        <ul className='max-w-390 w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-6'>
+        <ul className='max-w-390 w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-y-6'>
           {
             currentCards.map((book, index) => (
               <li key={book.id} className='content-center mx-auto'>

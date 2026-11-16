@@ -1,12 +1,12 @@
 const BookItem = ({cover, title, author, price, status}) => {
 
     return (
-        <div className="max-w-60 h-full mb-2 mx-2">
+        <div className="max-w-45 h-full mb-2 mx-2">
             <div className="mb-2">
-                <img src={ cover } alt={`${title}'s Book Cover`} className='w-full h-90 object-cover flex items-center justify-center bg-gray-200 border border-gray-300 text-md' />
+                <img src={ cover } alt={`${title}'s Book Cover`} className='w-full h-70 object-cover flex items-center justify-center bg-gray-200 border border-gray-300 text-md' />
             </div>
             <div className="">
-                <p className='font-semibold text-[var(--text)] text-[1.375rem] truncate w-60'>{ title }</p>
+                <p className='font-semibold text-[var(--text)] text-[1.2rem] truncate w-50'>{ title }</p>
                 <p className='text-base text-[var(--text)] truncate w-60'>{ author }</p>
                 {
                     status === true ? <p className='font-semibold text-lg text-[var(--text)]'>${ price }</p> : <p className="font-semibold text-lg text-[#D81313]">Out Of Stock</p>

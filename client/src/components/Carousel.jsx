@@ -23,8 +23,8 @@ const Carousel = () => {
                 loop={true}
                 pagination={{ 
                     clickable: true,
-                    bulletClass: 'swiper-pagination-bullet !w-2.5 !h-2.5 transition-all duration-300' ,
-                    bulletActiveClass: 'swiper-pagination-bullet-active !bg-gray-500 !w-6 !rounded-full',
+                    bulletClass: 'swiper-pagination-bullet !w-2.5 !h-2.5 !bg-white !opacity-60 transition-all duration-300',
+        bulletActiveClass: 'swiper-pagination-bullet-active !w-6 !rounded-full !opacity-100',
                 }}
                 autoplay={{
                     delay: 4000,
