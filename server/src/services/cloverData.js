@@ -11,15 +11,23 @@ async function fetchPage(categoryId, { limit, offset }) {
         expand: 'itemStock'
     })
 
-    const response = await fetch(
-        `${CLOVER_BASE_URL}/v3/merchants/${CLOVER_MERCHANT_ID}/categories/${categoryId}/items?${params}`,
-        {
-            headers: {
-                'Authorization': `Bearer ${CLOVER_API_TOKEN}`,
-                'User-Agent': 'Kingdom-App/1.0'
+    let response
+    const retries = 5
+    for (let attempt = 0; ;attempt++) {
+        response = await fetch(
+            `${CLOVER_BASE_URL}/v3/merchants/${CLOVER_MERCHANT_ID}/categories/${categoryId}/items?${params}`,
+            {
+                headers: {
+                    'Authorization': `Bearer ${CLOVER_API_TOKEN}`,
+                    'User-Agent': 'Kingdom-App/1.0'
+                }
             }
-        }
-    )
+        )
+
+        if (response.status !== 429 || attempt >= retries) break
+        const ms = 1000 * 2 ** attempt + Math.random() * 250
+        await new Promise(resolve => setTimeout(resolve, ms))
+    }
 
     if (!response.ok) {
         const errorText = await response.text()
@@ -34,20 +42,20 @@ async function fetchPage(categoryId, { limit, offset }) {
 
 }
 
-export async function loadInventory(categoryId, {max = Infinity, pageSize = 100} = {}) {
+export async function loadInventory(categoryId, { max = Infinity, pageSize = 100 } = {}) {
 
     const elements = []
     let offset = 0
 
-    while (elements.length < max){
+    while (elements.length < max) {
         const limit = Math.min(pageSize, max - elements.length)
-        const page = await fetchPage(categoryId, {limit, offset})
+        const page = await fetchPage(categoryId, { limit, offset })
 
         elements.push(...page)
 
-        if(page.length < limit) break
+        if (page.length < limit) break
         offset += page.length
     }
-    return {elements}
+    return { elements }
 }
 

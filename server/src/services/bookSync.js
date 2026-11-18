@@ -13,7 +13,7 @@ function parseBook(item) {
         available: item.available ?? true
     }
 
-    if (index === -1){
+    if (index === -1) {
         return {
             ...base,
             title: item.name,
@@ -27,39 +27,72 @@ function parseBook(item) {
     }
 }
 
-//fetching and inserting book data from clover into neon
+//fetching and inserting new book data from clover into neon and removing deleted books
 export async function syncBooks({ limit } = {}) {
     const pool = getPool()
+    try {
+        const data = await loadInventory(process.env.ROM_BOOK_CAT_ID, { max: limit })
 
-    const data = await loadInventory(process.env.ROM_BOOK_CAT_ID, {max: limit})
+        const byIsbn = new Map()
+        for (const item of data.elements) {
+            if (!item.code) continue
+            byIsbn.set(item.code, parseBook(item))
+        }
 
-    const byIsbn = new Map()
-    for (const item of data.elements){
-        if (!item.code) continue
-        byIsbn.set(item.code, parseBook(item))
-    }
+        const books = [...byIsbn.values()]
 
-    const books = [...byIsbn.values()]
+        const allowDelete = (limit == null || limit === Infinity) && books.length > 0
 
-    for (const b of books) {
+
         await pool.query(
             `INSERT INTO "books"
                 (book_title, book_author, book_price, isbn, book_available)
-                VALUES ($1, $2, $3, $4, $5)
+                SELECT * FROM unnest($1::text[], $2::text[], $3::numeric[], $4::text[], $5::boolean[])
                 ON CONFLICT (isbn) DO UPDATE SET
                     book_price = EXCLUDED.book_price,
                     book_available = EXCLUDED.book_available
                 `,
-            [b.title, b.author, b.price, b.isbn, b.available]
+            [
+                books.map(b => b.title),
+                books.map(b => b.author),
+                books.map(b => b.price),
+                books.map(b => b.isbn),
+                books.map(b => b.available),
+            ]
         )
+
+        let removed = 0;
+
+        if (allowDelete) {
+            const { rows } = await pool.query(`SELECT isbn FROM books`);
+            const cloverIsbn = new Set(byIsbn.keys());
+            const removeBooks = rows.map(r => r.isbn).filter(isbn => !cloverIsbn.has(isbn))
+
+            if (removeBooks.length > Math.max(10, rows.length * 0.2)) {
+                throw new Error(
+                    `Refusing to delete ${removeBooks.length} of ${rows.length} books; possible bad fetch`
+                )
+            }
+
+            if (removeBooks.length) {
+                const result = await pool.query(
+                    `DELETE FROM books WHERE isbn = ANY($1::text[])`,
+                    [removeBooks]
+                )
+                removed = result.rowCount
+            }
+        }
+
+    return { synced: books.length, removed}
+    } catch (err) {
+        console.error(err.message);
     }
-    return books.length
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
 //fetching covers for books stored without a cover
-export async function syncCovers({ limit = 50 } = {}){
+export async function syncCovers({ limit = 50 } = {}) {
     const pool = getPool()
 
     const { rows } = await pool.query(
@@ -70,19 +103,19 @@ export async function syncCovers({ limit = 50 } = {}){
     )
 
     let found = 0
-    for (const book of rows){
-        try{
+    for (const book of rows) {
+        try {
             const cover = await fetchGoogleCover(book.book_title, book.book_author)
-            if (cover){
+            if (cover) {
                 await pool.query(
                     `UPDATE "books" SET book_cover = $1 WHERE book_id = $2`,
                     [cover, book.book_id]
                 )
                 found++
-            } else{
+            } else {
                 console.log(`No cover for ${book.book_title}`)
             }
-        } catch (err){
+        } catch (err) {
             console.error(err.message)
         }
         await sleep(1200)
